@@ -1,0 +1,2394 @@
+Магазин
+
+Создаем общую папку magazin
+
+в общей папке создаем папки assets и php
+
+
+
+папка assets
+
+внутри этой папки папка css, img, js, sql, 
+
+папка css
+файл index.css
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0 10px;
+}
+
+.slideshow-container {
+    padding-top: 15px;
+    max-width: 80%;
+    position: relative;
+    margin: 40px auto;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    animation: fadeInSlide 1.5s ease forwards;
+}
+
+.slider-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.text {
+    color: var(--color-white);
+    font-size: 16px;
+    padding: 12px 16px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    border-radius: 0 0 8px 8px;
+}
+
+.numbertext {
+    color: var(--color-white);
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 4px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: var(--color-primary);
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0.4;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-company, .advantages {
+    max-width: 80%;
+    margin: 40px auto;
+    background-color: var(--color-white);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.about-company h2, .advantages h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+}
+
+.about-company__text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-text);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.advantages__list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.advantages__item {
+    flex: 1 1 220px;
+    background-color: var(--color-bg);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--color-primary);
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: default;
+}
+
+.advantages__item:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .slideshow-container, .about-company, .advantages {
+        max-width: 95%;
+        padding: 20px 15px;
+    }
+
+    .advantages__list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .advantages__item {
+        flex: 1 1 100%;
+    }
+}
+
+файл style.css
+
+:root {
+    --color-primary: #0057b8;
+    --color-secondary: #00aaff;
+    --color-text: #333333;
+    --color-bg: #f5f7fa;
+    --color-accent: #ff6f00;
+    --color-white: #ffffff;
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.header__logo:hover {
+    color: var(--color-accent);
+}
+
+.header__nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header__link:hover,
+.header__link:focus {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    outline: none;
+}
+
+.header__link--auth {
+    font-weight: 600;
+    border: 1.5px solid var(--color-white);
+    padding: 6px 14px;
+}
+
+.header__link--auth:hover,
+.header__link--auth:focus {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.header__link--user {
+    font-weight: 600;
+    background-color: var(--color-secondary);
+    padding: 6px 14px;
+}
+
+.header__link--user:hover,
+.header__link--user:focus {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.header__link--admin {
+    font-weight: 700;
+    background-color: var(--color-accent);
+    padding: 6px 14px;
+    color: var(--color-white);
+}
+
+.header__link--admin:hover,
+.header__link--admin:focus {
+    background-color: #cc5900;
+}
+
+/* Бургер-кнопка */
+.header__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+.header__burger:focus {
+    outline: 2px solid var(--color-accent);
+}
+
+.header__burger .burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.header__burger--active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__burger--active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.header__burger--active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__social {
+    flex: 1 1 50px;
+}
+
+.footer__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.footer__social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer__social-link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 1.5px solid var(--color-white);
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    outline: none;
+}
+
+.footer__copyright {
+    flex: 1 1 0px;
+    text-align: right;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.filter-form input,
+.filter-form select,
+.filter-form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.filter-form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.filter-form button:hover {
+    background-color: #555;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 6px;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: #666;
+    min-height: 40px;
+}
+
+.product-card strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.product-card div {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.fav-btn {
+    background: none;
+    border: 1px solid #ccc;
+    color: #d00;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-bottom: 8px;
+}
+.fav-btn:hover {
+    background-color: #fcecec;
+}
+
+.blog-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.blog-preview {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    transition: 0.2s ease;
+}
+
+.blog-preview h4 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.blog-preview p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.blog-preview button {
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.blog-preview button:hover {
+    background-color: #eaeaea;
+}
+
+.blog-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+    padding: 30px 10px;
+}
+
+.blog-modal-content {
+    background-color: #fff;
+    margin: auto;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+}
+
+.blog-modal-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.blog-modal-content h3 {
+    margin-bottom: 10px;
+}
+
+.blog-modal-content p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.blog-modal-content form textarea {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+    min-height: 80px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.blog-modal-content form button {
+    margin-top: 8px;
+    padding: 8px 14px;
+    background-color: #eee;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.blog-modal-content form button:hover {
+    background-color: #ddd;
+}
+
+.comment {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f8f8f8;
+    border-left: 3px solid #ddd;
+    border-radius: 4px;
+}
+
+.comment strong {
+    display: block;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 10px 16px;
+    font-size: 1rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+.admin-panel {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.admin-panel h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.admin-panel ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.admin-panel li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    transition: 0.2s ease;
+}
+
+.admin-panel li:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.admin-panel a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .footer__copyright {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .header__burger {
+        display: flex;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 50px;
+        right: 3px;
+        background-color: var(--color-primary);
+        justify-content: center;
+        width: 99%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 999;
+    }
+
+    .header__nav--active {
+        max-height: 400px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding-bottom: 20px;
+    }
+
+    .header__link {
+        padding: 12px 20px;
+    }
+
+    .header__link:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 426px) {
+    .header__nav{
+        flex-direction: column;
+    }
+}
+
+
+
+папка js 
+
+создаем файл about-blog.js
+
+
+"use strict"
+document.addEventListener('DOMContentLoaded', () => {
+    const postModal = document.getElementById('postModal');
+    const postBody = document.getElementById('modal-post-body');
+
+    document.querySelectorAll('.open-post-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const id = btn.dataset.id;
+            fetch(`php/get_post.php?id=${id}`)
+                .then(res => res.text())
+                .then(html => {
+                    postBody.innerHTML = html;
+                    postModal.style.display = 'block';
+                });
+        });
+    });
+
+    document.querySelector('#postModal .close-btn').addEventListener('click', () => {
+        postModal.style.display = 'none';
+    });
+
+    window.onclick = e => {
+        if (e.target == postModal) postModal.style.display = 'none';
+    };
+});
+
+
+файл "use strict"
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+
+файл services-card.js
+
+"use strict"
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('productModal');
+    const modalBody = document.getElementById('modal-body');
+
+    document.querySelectorAll('.open-modal-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const id = btn.dataset.id;
+
+            fetch(`../../php/get_product.php?id=${id}`)
+                .then(res => res.text())
+                .then(html => {
+                    modalBody.innerHTML = html;
+                    modal.style.display = 'block';
+                });
+        });
+    });
+
+    document.querySelector('.close-btn').addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.onclick = e => {
+        if (e.target == modal) modal.style.display = 'none';
+    };
+});
+
+
+
+
+ПАПКА php внутри этой папки создаем папку administration и папку connect
+
+
+В папку administration 
+
+создаем файлы adminmain.php
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель администратора | company 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php include '../header.php'; ?>
+<?php
+require '../connect/db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+    echo "Доступ запрещён.";
+    exit;
+}
+?>
+<main>
+    <div class="admin-panel">
+        <h2>Админ-панель</h2>
+        <ul>
+            <li><a href="manage_products.php">🧾 Управление товарами и услугами</a></li>
+            <li><a href="manage_slider.php">🎞 Редактирование слайдера</a></li>
+            <li><a href="manage_orders.php">📦 Заказы</a></li>
+            <li><a href="manage_users.php">👥 Пользователи</a></li>
+        </ul>
+    </div>
+</main>
+<?php include '../footer.php'; ?>
+</body>
+</html>
+
+создаем файл manage_orders.php
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказы | company 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php include '../header.php'; ?>
+<?php
+require '../connect/db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+    echo "Доступ запрещён."; exit;
+}
+
+if (isset($_POST['order_id'], $_POST['new_status'])) {
+    $stmt = $pdo->prepare("UPDATE orders SET status = ? WHERE id = ?");
+    $stmt->execute([$_POST['new_status'], $_POST['order_id']]);
+    header('Location: manage_orders.php');
+    exit;
+}
+
+$stmt = $pdo->query("
+  SELECT o.*, u.username, u.email
+  FROM orders o
+  JOIN users u ON o.user_id = u.id
+  ORDER BY o.order_date DESC
+");
+$orders = $stmt->fetchAll();
+?>
+
+<div class="admin-panel">
+    <h2>📦 Заказы пользователей</h2>
+
+    <?php if ($orders): foreach ($orders as $order): ?>
+        <?php
+        $productIds = explode(',', $order['product_ids']);
+        $placeholders = rtrim(str_repeat('?,', count($productIds)), ',');
+        $prodStmt = $pdo->prepare("SELECT name FROM products WHERE id IN ($placeholders)");
+        $prodStmt->execute($productIds);
+        $productNames = $prodStmt->fetchAll(PDO::FETCH_COLUMN);
+        ?>
+        <div class="blog-preview">
+            <strong>Пользователь:</strong> <?= htmlspecialchars($order['username']) ?><br>
+            <strong>Email:</strong> <a href="mailto:<?= htmlspecialchars($order['email']) ?>"><?= htmlspecialchars($order['email']) ?></a><br>
+            <strong>Дата:</strong> <?= $order['order_date'] ?><br>
+            <strong>Статус:</strong> <?= $order['status'] ?><br>
+            <strong>Товары:</strong> <?= implode(', ', $productNames) ?>
+
+            <form method="post" style="margin-top:10px;">
+                <input type="hidden" name="order_id" value="<?= $order['id'] ?>">
+                <label>
+                    Изменить статус:
+                    <select name="new_status">
+                        <option value="поступил" <?= $order['status']=='поступил'?'selected':'' ?>>Поступил</option>
+                        <option value="в процессе" <?= $order['status']=='в процессе'?'selected':'' ?>>В процессе</option>
+                        <option value="выполнен" <?= $order['status']=='выполнен'?'selected':'' ?>>Выполнен</option>
+                        <option value="отменён" <?= $order['status']=='отменён'?'selected':'' ?>>Отменён</option>
+                    </select>
+                </label>
+                <button type="submit" class="fav-btn">💾 Обновить</button>
+            </form>
+        </div>
+    <?php endforeach; else: ?>
+        <p>Пока нет заказов.</p>
+    <?php endif; ?>
+</div>
+<?php include '../footer.php'; ?>
+</body>
+</html>
+
+
+создаем файл manage_products.php
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Продукты | company 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php include '../header.php'; ?>
+<?php
+require '../connect/db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+    echo "Доступ запрещён.";
+    exit;
+}
+
+if (isset($_POST['delete_id'])) {
+    $delStmt = $pdo->prepare("DELETE FROM products WHERE id = ?");
+    $delStmt->execute([$_POST['delete_id']]);
+    header('Location: manage_products.php');
+    exit;
+}
+
+$products = $pdo->query("SELECT * FROM products ORDER BY id DESC")->fetchAll();
+?>
+
+<div class="admin-panel">
+    <h2>Товары и услуги</h2>
+
+    <a href="product_edit.php" class="fav-btn" style="display:inline-block; margin-bottom:20px;">➕ Добавить новый</a>
+
+    <div class="product-list">
+        <?php foreach ($products as $p): ?>
+            <div class="product-card">
+                <img src="<?= htmlspecialchars($p['image_path']) ?>" alt="">
+                <h3><?= htmlspecialchars($p['name']) ?></h3>
+                <p><?= mb_substr($p['description'], 0, 80) ?>...</p>
+                <strong><?= $p['price'] ?> ₽</strong>
+                <div style="margin-top:10px;">
+                    <a href="product_edit.php?id=<?= $p['id'] ?>" class="fav-btn">✏️ Редактировать</a>
+                    <form method="post" action="" style="display:inline-block;">
+                        <input type="hidden" name="delete_id" value="<?= $p['id'] ?>">
+                        <button type="submit" class="fav-btn remove" onclick="return confirm('Удалить этот товар?')">❌ Удалить</button>
+                    </form>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+<?php include '../footer.php'; ?>
+</body>
+</html>й
+
+
+создаем файл manage_slider.php
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление слайдером | company 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php include '../header.php'; ?>
+<?php
+require '../connect/db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+    echo "Доступ запрещён."; exit;
+}
+
+if (isset($_POST['delete_id'])) {
+    $stmt = $pdo->prepare("DELETE FROM slider_images WHERE id = ?");
+    $stmt->execute([$_POST['delete_id']]);
+    header("Location: manage_slider.php");
+    exit;
+}
+
+if (isset($_POST['update_id'])) {
+    $id = $_POST['update_id'];
+    $caption = $_POST['caption'];
+
+    $stmt = $pdo->prepare("SELECT image_path FROM slider_images WHERE id = ?");
+    $stmt->execute([$id]);
+    $old = $stmt->fetch();
+    $imagePath = $old['image_path'];
+
+    if (!empty($_FILES['new_image']['tmp_name'])) {
+        $uploadPath = '/assets/img/slider-images/';
+        $uploadDir = $_SERVER['DOCUMENT_ROOT'] . $uploadPath;
+        $ext = pathinfo($_FILES['new_image']['name'], PATHINFO_EXTENSION);
+        $filename = uniqid('slide_') . '.' . $ext;
+        $fullPath = $uploadDir . $filename;
+        if (move_uploaded_file($_FILES['new_image']['tmp_name'], $fullPath)) {
+            $imagePath = $uploadPath . $filename;
+        }
+    }
+
+    $stmt = $pdo->prepare("UPDATE slider_images SET image_path = ?, caption = ? WHERE id = ?");
+    $stmt->execute([$imagePath, $caption, $id]);
+    header("Location: manage_slider.php");
+    exit;
+}
+
+if (isset($_POST['new_caption']) && !empty($_FILES['new_image']['tmp_name'])) {
+    $uploadPath = '/assets/img/slider-images/';
+    $uploadDir = $_SERVER['DOCUMENT_ROOT'] . $uploadPath;
+
+    $ext = pathinfo($_FILES['new_image']['name'], PATHINFO_EXTENSION);
+    $filename = uniqid('slide_') . '.' . $ext;
+    $fullPath = $uploadDir . $filename;
+
+    if (move_uploaded_file($_FILES['new_image']['tmp_name'], $fullPath)) {
+        $imagePath = $uploadPath . $filename;
+        $stmt = $pdo->prepare("INSERT INTO slider_images (image_path, caption) VALUES (?, ?)");
+        $stmt->execute([$imagePath, $_POST['new_caption']]);
+    }
+
+    header("Location: manage_slider.php");
+    exit;
+}
+
+$slides = $pdo->query("SELECT * FROM slider_images ORDER BY id DESC")->fetchAll();
+?>
+
+<div class="admin-panel">
+    <h2>🎞 Редактирование слайдера</h2>
+
+    <h3>Текущие слайды</h3>
+    <?php if ($slides): foreach ($slides as $s): ?>
+        <div class="blog-preview" style="display:flex; gap:15px; align-items:center;">
+            <img src="<?= $s['image_path'] ?>" style="height:60px; width:auto; border-radius:4px;">
+            <form method="post" enctype="multipart/form-data" style="flex:1;">
+                <input type="hidden" name="update_id" value="<?= $s['id'] ?>">
+                <input type="file" name="new_image" style="width:100%; margin-bottom:5px;">
+                <input type="text" name="caption" value="<?= htmlspecialchars($s['caption']) ?>" style="width:100%;">
+                <div style="margin-top:8px;">
+                    <button type="submit" class="fav-btn">💾 Сохранить</button>
+                </div>
+            </form>
+            <form method="post" onsubmit="return confirm('Удалить слайд?')">
+                <input type="hidden" name="delete_id" value="<?= $s['id'] ?>">
+                <button class="fav-btn remove">❌</button>
+            </form>
+        </div>
+    <?php endforeach; else: ?>
+        <p>Слайдер пуст.</p>
+    <?php endif; ?>
+
+    <hr>
+    <h3>➕ Новый слайд</h3>
+    <form method="post" enctype="multipart/form-data" class="contact-form">
+        <label>Изображение:<br>
+            <input type="file" name="new_image" required>
+        </label>
+        <label>Подпись:<br>
+            <input type="text" name="new_caption">
+        </label>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<?php include '../footer.php'; ?>
+</body>
+</html>
+
+
+создаем файл manage_users.php
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователи | company 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php include '../header.php'; ?>
+<?php
+require '../connect/db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+    echo "Доступ запрещён."; exit;
+}
+
+if (isset($_POST['delete_id'])) {
+    $del = $pdo->prepare("DELETE FROM users WHERE id = ?");
+    $del->execute([$_POST['delete_id']]);
+    header("Location: manage_users.php");
+    exit;
+}
+
+if (isset($_POST['user_id'], $_POST['new_role'])) {
+    $set = $pdo->prepare("UPDATE users SET role = ? WHERE id = ?");
+    $set->execute([$_POST['new_role'], $_POST['user_id']]);
+    header("Location: manage_users.php");
+    exit;
+}
+
+$users = $pdo->query("SELECT * FROM users ORDER BY id DESC")->fetchAll();
+?>
+
+<div class="admin-panel">
+    <h2>👥 Пользователи</h2>
+
+    <?php foreach ($users as $u): ?>
+        <div class="blog-preview">
+            <strong><?= htmlspecialchars($u['username']) ?></strong><br>
+            Email: <?= htmlspecialchars($u['email']) ?><br>
+            Роль: <?= $u['role'] ?><br>
+
+            <form method="post" style="margin-top:8px; display:inline-block;">
+                <input type="hidden" name="user_id" value="<?= $u['id'] ?>">
+                <input type="hidden" name="new_role" value="<?= $u['role'] === 'admin' ? 'user' : 'admin' ?>">
+                <button type="submit" class="fav-btn">
+                    <?= $u['role'] === 'admin' ? 'Сделать пользователем' : 'Сделать админом' ?>
+                </button>
+            </form>
+
+            <form method="post" style="display:inline-block;" onsubmit="return confirm('Удалить пользователя?')">
+                <input type="hidden" name="delete_id" value="<?= $u['id'] ?>">
+                <button type="submit" class="fav-btn remove">Удалить</button>
+            </form>
+        </div>
+    <?php endforeach; ?>
+</div>
+<?php include '../footer.php'; ?>
+</body>
+</html>
+
+
+создаем файл product_edit.php
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменить продукт | company 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php
+include '../header.php';
+require '../connect/db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+    echo "Доступ запрещён.";
+    exit;
+}
+
+$isEdit = isset($_GET['id']);
+if ($isEdit) {
+    $stmt = $pdo->prepare("SELECT * FROM products WHERE id = ?");
+    $stmt->execute([$_GET['id']]);
+    $product = $stmt->fetch();
+    if (!$product) die("Товар не найден");
+} else {
+    $product = ['name'=>'','description'=>'','category'=>'', 'price'=>0,'image_path'=>'','date'=>'','quantity'=>0];
+}
+
+if (isset($_POST['name'])) {
+    $uploadPath = '/assets/img/services-images/';
+    $uploadDir = $_SERVER['DOCUMENT_ROOT'] . $uploadPath;
+    $imagePath = $product['image_path'];
+
+    if (!empty($_FILES['image']['tmp_name'])) {
+        $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
+        $allowed = ['jpg', 'jpeg', 'png', 'webp'];
+        if (in_array($ext, $allowed)) {
+            $filename = uniqid('prod_') . '.' . $ext;
+            $fullPath = $uploadDir . $filename;
+            if (move_uploaded_file($_FILES['image']['tmp_name'], $fullPath)) {
+                $imagePath = $uploadPath . $filename;
+            }
+        }
+    }
+
+    $data = [
+        $_POST['name'],
+        $_POST['description'],
+        $_POST['category'],
+        $_POST['price'],
+        $imagePath,
+        $_POST['date'],
+        $_POST['quantity']
+    ];
+
+    if ($isEdit) {
+        $data[] = $_GET['id'];
+        $upd = $pdo->prepare("UPDATE products SET name=?, description=?, category=?, price=?, image_path=?, date=?, quantity=? WHERE id=?");
+        $upd->execute($data);
+    } else {
+        $ins = $pdo->prepare("INSERT INTO products (name, description, category, price, image_path, date, quantity) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $ins->execute($data);
+    }
+
+    header('Location: manage_products.php');
+    exit;
+}
+?>
+<div class="admin-panel">
+    <h2><?= $isEdit ? 'Редактирование товара' : 'Добавление товара' ?></h2>
+
+    <form method="post" enctype="multipart/form-data" class="contact-form">
+        <label>Название:<br>
+            <input type="text" name="name" required value="<?= htmlspecialchars($product['name']) ?>">
+        </label>
+
+        <label>Описание:<br>
+            <textarea name="description" rows="5"><?= htmlspecialchars($product['description']) ?></textarea>
+        </label>
+
+        <label>Категория:<br>
+            <input type="text" name="category" value="<?= htmlspecialchars($product['category']) ?>">
+        </label>
+
+        <label>Цена:<br>
+            <input type="number" step="0.01" name="price" value="<?= $product['price'] ?>">
+        </label>
+
+        <label>Количество на складе:<br>
+            <input type="number" name="quantity" min="0" value="<?= $product['quantity'] ?>">
+        </label>
+
+        <label>Изображение:<br>
+            <input type="file" name="image">
+        </label>
+        <?php if ($product['image_path']): ?>
+            <p>Текущее: <img src="<?= $product['image_path'] ?>" style="max-height:60px;"></p>
+        <?php endif; ?>
+
+        <label>Дата:<br>
+            <input type="date" name="date" value="<?= $product['date'] ?>">
+        </label>
+
+        <button type="submit">Сохранить</button>
+    </form>
+</div>
+<?php include '../footer.php'; ?>
+</body>
+</html>
+
+
+
+ПАПКА connect
+
+файл db.php
+
+<?php
+$host = 'localhost';
+$db = 'database-shop';
+$user = 'suomi';
+$pass = 'kriss9058988780';
+$charset = 'utf8mb4';
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+];
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    die('Connection failed: ' . $e->getMessage());
+}
+
+
+и бд database-shop.sql
+
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Хост: 127.0.0.1:3306
+-- Время создания: Июн 03 2025 г., 23:28
+-- Версия сервера: 8.0.30
+-- Версия PHP: 8.1.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `database-shop`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `appointments`
+--
+
+CREATE TABLE `appointments` (
+  `id` int NOT NULL,
+  `user_id` int DEFAULT NULL,
+  `specialist_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `service` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `appointment_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int NOT NULL,
+  `user_id` int DEFAULT NULL,
+  `product_id` int DEFAULT NULL,
+  `quantity` int DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `cart`
+--
+
+INSERT INTO `cart` (`id`, `user_id`, `product_id`, `quantity`) VALUES
+(9, 1, 10, 8);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `favorites`
+--
+
+CREATE TABLE `favorites` (
+  `id` int NOT NULL,
+  `user_id` int DEFAULT NULL,
+  `product_id` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `favorites`
+--
+
+INSERT INTO `favorites` (`id`, `user_id`, `product_id`) VALUES
+(5, 1, 7),
+(6, 1, 6),
+(8, 4, 8),
+(9, 4, 7),
+(10, 4, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int NOT NULL,
+  `user_id` int DEFAULT NULL,
+  `product_ids` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `order_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `status` enum('поступил','в процессе','выполнен','отменён') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT 'поступил'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `product_ids`, `order_date`, `status`) VALUES
+(3, 3, '10', '2025-06-02 15:27:30', 'поступил'),
+(4, 4, '10', '2025-06-03 22:36:37', 'поступил');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `products`
+--
+
+CREATE TABLE `products` (
+  `id` int NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `category` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `image_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `quantity` int DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `category`, `price`, `image_path`, `date`, `quantity`) VALUES
+(1, 'Маникюр классический', 'Услуга включает обработку ногтей, кутикулы и нанесение лака.', 'Ногтевой сервис', '1200.00', '/assets/img/services-images/image-40.png', '2025-05-23', 10),
+(2, 'Тур в Париж', 'Романтический тур на 5 дней с перелётом и проживанием.', 'Туризм', '56000.00', '/assets/img/services-images/image-40.png', '2025-07-10', 0),
+(3, 'Настройка ПК', 'Полная диагностика и настройка компьютера на дому.', 'Услуги', '2500.00', '/assets/img/services-images/image-40.png', '2025-05-23', 0),
+(4, 'Шеллак покрытие', 'Устойчивое покрытие ногтей гель-лаком на 2-3 недели.', 'Ногтевой сервис', '1500.00', '/assets/img/services-images/image-40.png', '2025-05-23', 0),
+(5, 'Горящий тур в Турцию', '7 дней в отеле 5★ всё включено.', 'Туризм', '47000.00', '/assets/img/services-images/image-40.png', '2025-06-15', 0),
+(6, 'Создание сайта-визитки', 'Одностраничный сайт для вашего бизнеса.', 'Услуги', '9000.00', '/assets/img/services-images/image-40.png', '2025-05-23', 0),
+(7, 'Педикюр аппаратный', 'Профессиональный уход за ногами.', 'Ногтевой сервис', '1600.00', '/assets/img/services-images/image-40.png', '2025-05-23', 0),
+(8, 'Экскурсия в Санкт-Петербург', 'Обзорная экскурсия на 3 дня.', 'Туризм', '32000.00', '/assets/img/services-images/image-40.png', '2025-07-01', 0),
+(9, 'Установка Linux дада', 'Установка и настройка Linux + драйвера.', 'Айти', '20000.00', '/assets/img/services-images/prod_683060312719e.png', '2025-05-23', 0),
+(10, 'Наращивание ногтей', 'Длинные и крепкие ногти по индивидуальному дизайну.', 'Ногтевой сервис', '2200.00', '/assets/img/services-images/image-40.png', '2025-05-23', 94),
+(11, 'йцукенгшщ', 'ыеркмниоеглнатш', 'пупупу', '1000.00', '/assets/img/services-images/prod_683f55e9c902f.jpg', '2025-06-04', 100);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `slider_images`
+--
+
+CREATE TABLE `slider_images` (
+  `id` int NOT NULL,
+  `image_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `caption` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `slider_images`
+--
+
+INSERT INTO `slider_images` (`id`, `image_path`, `caption`) VALUES
+(1, '/assets/img/slider-images/a-woman-image-sharpener.jpg', 'Тестовое описание пупупу'),
+(2, '/assets/img/slider-images/pexels-sebastian-214574.jpg', 'Тестовое описание второго слайда');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int NOT NULL,
+  `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password_hash` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `role` enum('guest','user','admin') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT 'user'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password_hash`, `email`, `role`) VALUES
+(1, 'suomi', '$2y$10$hjF.puipZakRzQtXFh7m4enhsyATT/nMa4zpKNfJVjopejO/7ri4i', 'suomi@suomi.com', 'admin'),
+(3, 'qwerty', '$2y$10$5v2ZH.ioTUjttJxkgzJjUelHZCDnIcitH.VU1oy8zAFmER3ANRBAe', 'arr@gmail.com', 'user'),
+(4, 'lolkek', '$2y$10$T0JQIkkQBX2jSK7/9m3vkO.V.7pe5cJgtfGH5ZbiVcAf0oNw1RKIG', '1234@qwerty.qw', 'admin');
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `appointments`
+--
+ALTER TABLE `appointments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Индексы таблицы `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Индексы таблицы `favorites`
+--
+ALTER TABLE `favorites`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Индексы таблицы `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Индексы таблицы `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `slider_images`
+--
+ALTER TABLE `slider_images`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `appointments`
+--
+ALTER TABLE `appointments`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT для таблицы `favorites`
+--
+ALTER TABLE `favorites`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT для таблицы `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT для таблицы `slider_images`
+--
+ALTER TABLE `slider_images`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `appointments`
+--
+ALTER TABLE `appointments`
+  ADD CONSTRAINT `appointments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Ограничения внешнего ключа таблицы `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Ограничения внешнего ключа таблицы `favorites`
+--
+ALTER TABLE `favorites`
+  ADD CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Ограничения внешнего ключа таблицы `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+в самой папке php создаем файлы 
+
+файл add_to_cart.php
+
+<?php
+session_start();
+require 'connect/db.php';
+
+if (!isset($_SESSION['user'])) exit;
+
+$user_id = $_SESSION['user']['id'];
+$product_id = (int)$_POST['product_id'];
+$quantity = max(1, (int)$_POST['quantity']);
+
+// Проверим, есть ли уже такой товар в корзине
+$check = $pdo->prepare("SELECT id, quantity FROM cart WHERE user_id = ? AND product_id = ?");
+$check->execute([$user_id, $product_id]);
+$existing = $check->fetch();
+
+if ($existing) {
+    // Обновляем количество
+    $newQty = $existing['quantity'] + $quantity;
+    $update = $pdo->prepare("UPDATE cart SET quantity = ? WHERE id = ?");
+    $update->execute([$newQty, $existing['id']]);
+} else {
+    // Добавляем новый
+    $insert = $pdo->prepare("INSERT INTO cart (user_id, product_id, quantity) VALUES (?, ?, ?)");
+    $insert->execute([$user_id, $product_id, $quantity]);
+}
+
+header('Location: ../services.php');
+
+
+файл add_to_favorites.php
+
+<?php
+session_start();
+require 'connect/db.php';
+
+if (!isset($_SESSION['user'])) exit;
+
+$uid = $_SESSION['user']['id'];
+$pid = (int)$_POST['product_id'];
+
+$check = $pdo->prepare("SELECT id FROM favorites WHERE user_id = ? AND product_id = ?");
+$check->execute([$uid, $pid]);
+
+if (!$check->fetch()) {
+    $stmt = $pdo->prepare("INSERT INTO favorites (user_id, product_id) VALUES (?, ?)");
+    $stmt->execute([$uid, $pid]);
+}
+
+header('Location: ../services.php');
+
+
+файл exit.php
+
+<?php
+session_start();
+session_destroy();
+header('Location: ../index.php');
+exit;
+
+файл footer.php
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__social">
+            <h3 class="footer__title">Социальные сети:</h3>
+            <nav class="footer__social-links">
+                <a href="#" class="footer__social-link">Telegram</a>
+                <a href="#" class="footer__social-link">VK</a>
+                <a href="#" class="footer__social-link">Whatsapp</a>
+            </nav>
+        </div>
+        <p class="footer__copyright">
+            копмания 2025 | Все права зарегестрированы.
+        </p>
+    </div>
+</footer>
+
+
+файл get_product.php
+
+<?php
+session_start();
+require 'connect/db.php';
+
+
+$id = (int)$_GET['id'];
+$product = $pdo->prepare("SELECT * FROM products WHERE id = ?");
+$product->execute([$id]);
+$p = $product->fetch();
+
+if (!$p) {
+    echo "<p>Товар не найден</p>";
+    exit;
+}
+
+$reviews = $pdo->prepare("SELECT r.*, u.username FROM reviews r JOIN users u ON r.user_id = u.id WHERE product_id = ? ORDER BY id DESC");
+$reviews->execute([$id]);
+
+?>
+
+<h3><?= htmlspecialchars($p['name']) ?></h3>
+<img src="<?= htmlspecialchars($p['image_path']) ?>" style="max-width:100%; border-radius:6px;">
+<p><?= nl2br(htmlspecialchars($p['description'])) ?></p>
+<p><strong>Цена:</strong> <?= $p['price'] ?> ₽</p>
+
+<form method="post" action="/php/add_to_cart.php">
+    <input type="hidden" name="product_id" value="<?= $p['id'] ?>">
+    <label>Количество:
+        <input type="number" name="quantity" min="1" max="<?= $p['quantity'] ?>" value="1" required>
+    </label><br>
+    <button type="submit">Добавить в корзину</button>
+</form>
+
+
+файл header.php
+
+<?php session_start(); ?>
+<header class="header">
+    <div class="header__container">
+        <a href="../index.php" class="header__logo"> <img src="/assets/img/logotip.png"> компания</a>
+
+        <button class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="headerNav">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+
+        <nav class="header__nav" id="headerNav">
+            <a href="/index.php" class="header__link">Главная</a>
+            <a href="/about.php" class="header__link">О нас</a>
+            <?php if (!isset($_SESSION['user'])): ?>
+                <a href="/php/login.php" class="header__link header__link--auth">Вход</a>
+                <a href="/php/registration.php" class="header__link header__link--auth">Регистрация</a>
+            <?php else: ?>
+                <a href="/services.php" class="header__link header__link--user">Каталог</a>
+                <a href="/account.php" class="header__link header__link--user">Профиль</a>
+                <a href="/php/exit.php" class="header__link header__link--user">Выход</a>
+                <?php if ($_SESSION['user']['role'] === 'admin'): ?>
+                    <a href="/php/administration/adminmain.php" class="header__link header__link--admin">Панель управления</a>
+                <?php endif; ?>
+            <?php endif; ?>
+        </nav>
+    </div>
+</header>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const burger = document.querySelector('.header__burger');
+        const nav = document.querySelector('.header__nav');
+
+        burger.addEventListener('click', () => {
+            const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
+            burger.setAttribute('aria-expanded', !expanded);
+            nav.classList.toggle('header__nav--active');
+            burger.classList.toggle('header__burger--active');
+        });
+    });
+</script>
+
+
+файл login.php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Авторизация | company 2025</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php
+session_start();
+include 'header.php';
+?>
+<h2>Вход</h2>
+<form method="post" action="login.php">
+    <input type="text" name="username" placeholder="Логин или Email" required>
+    <input type="password" name="password" placeholder="Пароль" required>
+    <button type="submit" name="login">Войти</button>
+</form>
+
+<?php
+require '../php/connect/db.php';
+
+if (isset($_POST['login'])) {
+    $username = trim($_POST['username']);
+    $password = $_POST['password'];
+
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? OR email = ?");
+    $stmt->execute([$username, $username]);
+    $user = $stmt->fetch();
+
+    if ($user && password_verify($password, $user['password_hash'])) {
+        $_SESSION['user'] = [
+            'id' => $user['id'],
+            'username' => $user['username'],
+            'role' => $user['role']
+        ];
+        echo "Успешный вход. <a href='../index.php'>На главную</a>";
+    } else {
+        echo "Неверный логин или пароль.";
+    }
+}
+?>
+<?php include 'footer.php'; ?>
+<script src="/assets/js/index-slider.js"></script>
+</body>
+</html>
+
+
+файл place_order.php
+
+<?php
+session_start();
+require 'connect/db.php';
+
+if (!isset($_SESSION['user'])) exit;
+$user_id = $_SESSION['user']['id'];
+
+$stmt = $pdo->prepare("SELECT c.product_id, c.quantity, p.quantity AS stock FROM cart c JOIN products p ON c.product_id = p.id WHERE c.user_id = ?");
+$stmt->execute([$user_id]);
+$items = $stmt->fetchAll();
+
+if (!$items) {
+    header("Location: ../../account.php");
+    exit;
+}
+
+foreach ($items as $item) {
+    if ($item['quantity'] > $item['stock']) {
+        die("Недостаточно товара на складе для ID {$item['product_id']}");
+    }
+}
+
+foreach ($items as $item) {
+    $newStock = $item['stock'] - $item['quantity'];
+    $upd = $pdo->prepare("UPDATE products SET quantity = ? WHERE id = ?");
+    $upd->execute([$newStock, $item['product_id']]);
+}
+
+$product_ids = implode(',', array_column($items, 'product_id'));
+$order = $pdo->prepare("INSERT INTO orders (user_id, product_ids) VALUES (?, ?)");
+$order->execute([$user_id, $product_ids]);
+
+$pdo->prepare("DELETE FROM cart WHERE user_id = ?")->execute([$user_id]);
+
+header("Location: ../account.php");
+
+
+
+
+файл registration.php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация | company 2025</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php include 'header.php'; ?>
+<h2>Регистрация</h2>
+<form method="post" action="registration.php">
+    <input type="text" name="username" placeholder="Логин" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Пароль" required>
+    <button type="submit" name="register">Зарегистрироваться</button>
+</form>
+
+<?php
+require '../php/connect/db.php';
+
+if (isset($_POST['register'])) {
+    $username = trim($_POST['username']);
+    $email = trim($_POST['email']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    // Проверка уникальности логина и почты
+    $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
+    $stmt->execute([$username, $email]);
+    if ($stmt->fetch()) {
+        echo "Пользователь с таким логином или email уже существует.";
+    } else {
+        $stmt = $pdo->prepare("INSERT INTO users (username, password_hash, email) VALUES (?, ?, ?)");
+        if ($stmt->execute([$username, $password, $email])) {
+            echo "Регистрация прошла успешно. <a href='login.php'>Войти</a>";
+        } else {
+            echo "Ошибка при регистрации.";
+        }
+    }
+}
+?>
+<?php include 'footer.php'; ?>
+<script src="/assets/js/index-slider.js"></script>
+</body>
+</html>
+
+
+файл remove_from_cart.php
+
+<?php
+session_start();
+require 'connect/db.php';
+
+if (!isset($_SESSION['user'])) exit;
+
+$cart_id = (int)$_POST['cart_id'];
+$uid = $_SESSION['user']['id'];
+
+$stmt = $pdo->prepare("DELETE FROM cart WHERE id = ? AND user_id = ?");
+$stmt->execute([$cart_id, $uid]);
+
+header('Location: ../account.php');
+
+файл remove_from_favorites.php
+
+<?php
+session_start();
+require 'connect/db.php';
+
+if (!isset($_SESSION['user'])) exit;
+
+$uid = $_SESSION['user']['id'];
+$pid = (int)$_POST['product_id'];
+
+$stmt = $pdo->prepare("DELETE FROM favorites WHERE user_id = ? AND product_id = ?");
+$stmt->execute([$uid, $pid]);
+
+header('Location: ../services.php');
+
+
+файл update_cart.php
+
+<?php
+session_start();
+require 'connect/db.php';
+
+if (!isset($_SESSION['user'])) exit;
+
+$cart_id = (int)$_POST['cart_id'];
+$new_qty = max(1, (int)$_POST['quantity']);
+
+$uid = $_SESSION['user']['id'];
+
+$stmt = $pdo->prepare("
+  SELECT p.quantity AS stock
+  FROM cart c
+  JOIN products p ON c.product_id = p.id
+  WHERE c.id = ? AND c.user_id = ?
+");
+$stmt->execute([$cart_id, $uid]);
+$stock = $stmt->fetchColumn();
+
+if ($stock === false) exit;
+
+$final_qty = min($new_qty, $stock);
+
+$upd = $pdo->prepare("UPDATE cart SET quantity = ? WHERE id = ? AND user_id = ?");
+$upd->execute([$final_qty, $cart_id, $uid]);
+
+header("Location: ../account.php");
+
+
+далее в самой шлавной общий папке создаем файлы 
+
+about.php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>О нас | company 2025</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php include 'php/header.php'?>
+<main>
+    <div class="container">
+        <h2>О нас</h2>
+        <p>сюда можно добавить какие то красивые блоки о компании, это уже на вас</p>
+    </div>
+</main>
+<?php include 'php/footer.php'?>
+<script src="/assets/js/about-blog.js"></script>
+</body>
+</html>
+
+файл account.php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Личный кабинет | company 2025</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php include 'php/header.php'?>
+<?php
+session_start();
+require 'php/connect/db.php';
+if (!isset($_SESSION['user'])) {
+    echo "<p style='text-align:center;'>Вы не авторизованы. <a href='login.php'>Войти</a></p>";
+    include 'php/footer.php';
+    exit;
+}
+
+$uid = $_SESSION['user']['id'];
+?>
+
+<div class="container">
+    <h2>Личный кабинет</h2>
+
+    <section>
+        <h3>❤ Избранное</h3>
+        <div class="product-list">
+            <?php
+            $stmt = $pdo->prepare("SELECT p.* FROM favorites f JOIN products p ON f.product_id = p.id WHERE f.user_id = ?");
+            $stmt->execute([$uid]);
+            $favs = $stmt->fetchAll();
+
+            if ($favs): foreach ($favs as $p): ?>
+                <div class="product-card">
+                    <img src="<?= $p['image_path'] ?>" alt="">
+                    <h4><?= $p['name'] ?></h4>
+                    <form method="post" action="php/remove_from_favorites.php">
+                        <input type="hidden" name="product_id" value="<?= $p['id'] ?>">
+                        <button type="submit" class="fav-btn remove">Удалить</button>
+                    </form>
+                </div>
+            <?php endforeach; else: ?>
+                <p>Нет товаров в избранном.</p>
+            <?php endif; ?>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>🛒 Корзина</h3>
+        <div class="product-list">
+            <?php
+            $stmt = $pdo->prepare("
+  SELECT c.id AS cart_id, c.quantity AS cart_quantity, p.*
+  FROM cart c
+  JOIN products p ON c.product_id = p.id
+  WHERE c.user_id = ?
+");
+            $stmt->execute([$uid]);
+            $cart = $stmt->fetchAll();
+
+            if ($cart): foreach ($cart as $p): ?>
+                <div class="product-card">
+                    <img src="<?= $p['image_path'] ?>" alt="">
+                    <h4><?= $p['name'] ?></h4>
+                    <p><strong><?= $p['price'] ?> ₽</strong></p>
+                    <p><strong><?= $p['price'] ?> ₽</strong> × <?= $p['cart_quantity'] ?> шт = <strong><?= $p['price'] * $p['cart_quantity'] ?> ₽</strong></p>
+                    <form method="post" action="php/update_cart.php" style="margin-top:8px;">
+                        <input type="hidden" name="cart_id" value="<?= $p['cart_id'] ?>">
+                        <label>
+                            Кол-во:
+                            <input type="number" name="quantity" min="1" max="<?= $p['quantity'] ?>" value="<?= $p['cart_quantity'] ?>" style="width:60px;">
+                        </label>
+                        <button type="submit" class="fav-btn">Обновить</button>
+                    </form>
+                    <form method="post" action="php/remove_from_cart.php">
+                        <input type="hidden" name="cart_id" value="<?= $p['cart_id'] ?>">
+                        <button type="submit" class="fav-btn remove">Удалить</button>
+                    </form>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <form method="post" action="php/place_order.php" style="margin-top:20px;">
+            <button type="submit" class="fav-btn">Оформить заказ</button>
+        </form>
+        <?php else: ?>
+            <p>Корзина пуста.</p>
+        <?php endif; ?>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>📦 Мои заказы (при создании заказа с вами свяжется наш менеджер для уточнения деталей по email)</h3>
+        <?php
+        $stmt = $pdo->prepare("SELECT * FROM orders WHERE user_id = ? ORDER BY order_date DESC");
+        $stmt->execute([$uid]);
+        $orders = $stmt->fetchAll();
+
+        if ($orders): foreach ($orders as $order):
+            $productIds = explode(',', $order['product_ids']);
+            $placeholders = rtrim(str_repeat('?,', count($productIds)), ',');
+            $prodStmt = $pdo->prepare("SELECT name FROM products WHERE id IN ($placeholders)");
+            $prodStmt->execute($productIds);
+            $names = $prodStmt->fetchAll(PDO::FETCH_COLUMN);
+            ?>
+            <div style="margin-bottom:15px; padding:10px; background:#f7f7f7; border-radius:6px;">
+                <strong>Дата:</strong> <?= $order['order_date'] ?><br>
+                <strong>Товары:</strong> <?= implode(', ', $names) ?>
+            </div>
+        <?php endforeach; else: ?>
+            <p>У вас пока нет заказов.</p>
+        <?php endif; ?>
+    </section>
+</div>
+<?php include 'php/footer.php'?>
+</body>
+</html>
+
+
+
+файл index.php
+<?php require 'php/connect/db.php' ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная страница | company 2025</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+<?php include 'php/header.php'?>
+<main>
+    <?php
+    require 'php/connect/db.php';
+    $slides = $pdo->query("SELECT * FROM slider_images")->fetchAll();
+    $slideCount = count($slides);
+    ?>
+
+    <div class="slideshow-container">
+        <?php foreach ($slides as $i => $slide): ?>
+            <div class="mySlides fade">
+                <div class="numbertext"><?= $i + 1 ?> / <?= $slideCount ?></div>
+                <img alt="" class="slider-image" src="<?= htmlspecialchars($slide['image_path']) ?>">
+                <div class="text"><?= htmlspecialchars($slide['caption']) ?></div>
+            </div>
+        <?php endforeach; ?>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <?php for ($i = 1; $i <= $slideCount; $i++): ?>
+            <span class="dot" onclick="currentSlide(<?= $i ?>)"></span>
+        <?php endfor; ?>
+    </div>
+</main>
+<?php include 'php/footer.php'?>
+<script src="/assets/js/index-slider.js"></script>
+</body>
+</html>
+
+
+файл services.php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Каталог | company 2025</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<?php include 'php/header.php'?>
+<main>
+    <div class="services-container">
+        <h2>Каталог товаров и услуг</h2>
+
+        <form method="GET" class="filter-form">
+            <input type="text" name="q" placeholder="Поиск по названию..." value="<?= htmlspecialchars($_GET['q'] ?? '') ?>">
+
+            <select name="category">
+                <option value="">Все категории</option>
+                <?php
+                require 'php/connect/db.php';
+                $cats = $pdo->query("SELECT DISTINCT category FROM products")->fetchAll();
+                foreach ($cats as $cat) {
+                    $selected = ($_GET['category'] ?? '') === $cat['category'] ? 'selected' : '';
+                    echo "<option value='{$cat['category']}' $selected>{$cat['category']}</option>";
+                }
+                ?>
+            </select>
+
+            <label>Цена до: <input type="number" name="max_price" value="<?= htmlspecialchars($_GET['max_price'] ?? '') ?>"></label>
+            <button type="submit">Применить фильтр</button>
+        </form>
+        <?php
+        $q = $_GET['q'] ?? '';
+        $category = $_GET['category'] ?? '';
+        $max_price = $_GET['max_price'] ?? '';
+        $sql = "SELECT * FROM products WHERE 1=1";
+        $params = [];
+
+        if ($q) {
+            $sql .= " AND name LIKE ?";
+            $params[] = "%$q%";
+        }
+        if ($category) {
+            $sql .= " AND category = ?";
+            $params[] = $category;
+        }
+        if ($max_price !== '') {
+            $sql .= " AND price <= ?";
+            $params[] = $max_price;
+        }
+        $sql .= " ORDER BY id DESC";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute($params);
+        $products = $stmt->fetchAll();
+        ?>
+        <div class="product-list">
+            <?php if ($products): ?>
+                <?php foreach ($products as $product): ?>
+                    <div class="product-card">
+                        <img src="<?= htmlspecialchars($product['image_path']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
+                        <h3><?= htmlspecialchars($product['name']) ?></h3>
+                        <p><?= htmlspecialchars($product['description']) ?></p>
+                        <strong><?= $product['price'] ?> ₽</strong>
+                        <?php
+                        $isFavorite = false;
+                        if (isset($_SESSION['user'])) {
+                            $uid = $_SESSION['user']['id'];
+                            $checkFav = $pdo->prepare("SELECT id FROM favorites WHERE user_id = ? AND product_id = ?");
+                            $checkFav->execute([$uid, $product['id']]);
+                            $isFavorite = $checkFav->fetch() ? true : false;
+                        }
+                        ?>
+                        <?php if (isset($_SESSION['user'])): ?>
+                            <?php if ($isFavorite): ?>
+                                <form method="post" action="php/remove_from_favorites.php" class="fav-form">
+                                    <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+                                    <button type="submit" class="fav-btn" style="color:#999;">✖ Удалить из избранного</button>
+                                </form>
+                            <?php else: ?>
+                                <form method="post" action="php/add_to_favorites.php" class="fav-form">
+                                    <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+                                    <button type="submit" class="fav-btn">❤ В избранное</button>
+                                </form>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                        <button class="open-modal-btn" data-id="<?= $product['id'] ?>">Подробнее</button>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Ничего не найдено по заданным параметрам.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+</main>
+<?php include 'php/footer.php'?>
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modal-body">
+        </div>
+    </div>
+</div>
+<script src="/assets/js/services-card.js"></script>
+</body>
+</html>
+
+
+
+
+
+

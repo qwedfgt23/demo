@@ -1,0 +1,3477 @@
+
+Это CSS.   (style.css
+
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f9f9f9;
+}
+
+.auth-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.auth-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #4C3A26;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.auth-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4C3A26;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #3a2c1d;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.wrapper {
+    max-width: 1420px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.text-large {
+    font-size: 30px;
+    color: #000;
+}
+
+.text-small {
+    font-size: 16px;
+    color: #000;
+}
+
+.padding-top {
+    padding-top: 20px;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo img {
+    max-width: 120px;
+}
+
+.header-nav a {
+    color: #000;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-banner {
+    padding: 100px 20px;
+    text-align: center;
+    color: #948585;
+    background-color: #f7f7f7;
+}
+
+.banner-title {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.banner-button {
+    display: inline-block;
+    font-size: 20px;
+    color: #4C3A26;
+    padding: 10px 20px;
+    border: 1px solid #4C3A26;
+    text-decoration: none;
+}
+
+.section-title {
+    font-size: 28px;
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+.card {
+    background-color: #F4F5F7;
+    width: 285px;
+    text-align: center;
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-button {
+    font-size: 16px;
+    color: #4C3A26;
+    text-decoration: none;
+}
+
+/* Стиль секций */
+.section {
+    padding: 50px 0;
+}
+
+.sale-section {
+    color: red;
+}
+
+.new-section {
+    color: #CEBC36;
+}
+
+.footer {
+    background-color: #F9F1E7;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #9F9F9F;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .text-large {
+        font-size: 24px;
+    }
+
+    .banner-title {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .header-nav a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-large {
+        font-size: 20px;
+    }
+
+    .banner-title {
+        font-size: 20px;
+    }
+
+    .banner-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+}
+
+/* Стили для слайдера акций */
+.promotions-slider {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.promotion-slide {
+    padding: 15px;
+}
+
+.slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'bootstrap-icons';
+    font-size: 40px;
+    opacity: 0.8;
+}
+
+.slick-prev {
+    left: -50px;
+}
+
+.slick-next {
+    right: -50px;
+}
+
+.slick-prev:before {
+    content: "\F284";
+}
+
+.slick-next:before {
+    content: "\F285";
+}
+
+.discount-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.price {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.product-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-info h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.promo-message {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 10px 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.discounted-price {
+    color: #dc3545;
+    font-weight: bold;
+}
+.original-price {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+__________________________________________________________________________
+
+Это JavaScript.  (main.js)
+
+"use strict"
+$(document).ready(function(){
+    $('.promotions-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="bi bi-chevron-right"></i></button>',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
+    });
+});
+
+__________________________________________________________________________
+
+Добавление товара.  (add_product.php)
+
+<?php
+session_start();
+require 'db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['is_admin'] != 1) {
+    header('Location: ../login.php');
+    exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = trim($_POST['name']);
+    $description = trim($_POST['description']);
+    $price = (float)$_POST['price'];
+    $stock = (int)$_POST['stock'];
+    $imagePath = '';
+
+    if (!empty($_FILES['image']['name'])) {
+        $targetDir = '../img/';
+        $imageName = basename($_FILES['image']['name']);
+        $imagePath = $targetDir . $imageName;
+        $dbImagePath = 'img/' . $imageName;
+
+        if (!is_dir($targetDir)) {
+            mkdir($targetDir, 0777, true);
+        }
+
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $imagePath)) {
+            // Добавление товара в базу данных
+            $stmt = $pdo->prepare("INSERT INTO products (name, description, price, stock, image) VALUES (:name, :description, :price, :stock, :image)");
+            $stmt->execute([
+                'name' => $name,
+                'description' => $description,
+                'price' => $price,
+                'stock' => $stock,
+                'image' => $dbImagePath,
+            ]);
+
+            header('Location: admin_panel.php');
+            exit;
+        } else {
+            $error = 'Не удалось загрузить файл. Попробуйте снова.';
+        }
+    } else {
+        $error = 'Вы не выбрали файл изображения.';
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить товар</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<?php include 'header.php'; ?>
+
+<section class="add-product py-5">
+    <div class="container">
+        <h1 class="mb-4">Добавить товар</h1>
+        <?php if (isset($error)): ?>
+            <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
+        <?php endif; ?>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="name" class="form-label">Название</label>
+                <input type="text" name="name" id="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Описание</label>
+                <textarea name="description" id="description" rows="4" class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Цена</label>
+                <input type="number" name="price" id="price" step="0.01" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Количество</label>
+                <input type="number" name="stock" id="stock" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Изображение</label>
+                <input type="file" name="image" id="image" class="form-control" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить товар</button>
+        </form>
+    </div>
+</section>
+
+<?php include 'footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+__________________________________________________________________________
+
+Добавление промоушен. (add_promotion.php)
+
+<?php
+session_start();
+require 'db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['is_admin'] != 1) {
+    header('Location: login.php');
+    exit;
+}
+
+$products = $pdo->query("SELECT id, name FROM products")->fetchAll();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $discountPercent = (int)$_POST['discount_percent'];
+    $startDate = $_POST['start_date'];
+    $endDate = $_POST['end_date'];
+    $selectedProducts = $_POST['products'] ?? [];
+
+    // Загрузка изображения
+    $imagePath = null;
+    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        $uploadDir = '../img/promotions/';
+        if (!file_exists($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
+        }
+
+        $extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+        $filename = uniqid() . '.' . $extension;
+        $destination = $uploadDir . $filename;
+
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $destination)) {
+            $imagePath = 'img/promotions/' . $filename;
+        }
+    }
+
+    try {
+        $pdo->beginTransaction();
+
+        // Добавляем акцию
+        $stmt = $pdo->prepare("
+            INSERT INTO promotions (title, description, discount_percent, start_date, end_date, image)
+            VALUES (:title, :description, :discount_percent, :start_date, :end_date, :image)
+        ");
+        $stmt->execute([
+            ':title' => $title,
+            ':description' => $description,
+            ':discount_percent' => $discountPercent,
+            ':start_date' => $startDate,
+            ':end_date' => $endDate,
+            ':image' => $imagePath
+        ]);
+
+        $promotionId = $pdo->lastInsertId();
+
+        // Добавляем товары к акции
+        if (!empty($selectedProducts)) {
+            $stmt = $pdo->prepare("INSERT INTO promotion_products (promotion_id, product_id) VALUES (:promotion_id, :product_id)");
+            foreach ($selectedProducts as $productId) {
+                $stmt->execute([
+                    ':promotion_id' => $promotionId,
+                    ':product_id' => $productId
+                ]);
+            }
+        }
+
+        $pdo->commit();
+        header('Location: admin_panel.php');
+        exit;
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        $error = "Ошибка при добавлении акции: " . $e->getMessage();
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить акцию</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<?php include 'header.php'; ?>
+
+<div class="container py-5">
+    <h1 class="mb-4">Добавить новую акцию</h1>
+
+    <?php if (isset($error)): ?>
+        <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
+    <?php endif; ?>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Название акции</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Описание акции</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="discount_percent" class="form-label">Скидка в процентах</label>
+            <input type="number" class="form-control" id="discount_percent" name="discount_percent" min="1" max="100" required>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="start_date" class="form-label">Дата начала</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" required>
+            </div>
+            <div class="col-md-6">
+                <label for="end_date" class="form-label">Дата окончания</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" required>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Изображение для акции</label>
+            <input type="file" class="form-control" id="image" name="image">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Товары, участвующие в акции</label>
+            <select class="form-select" name="products[]" multiple size="5">
+                <?php foreach ($products as $product): ?>
+                    <option value="<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['name']); ?></option>
+                <?php endforeach; ?>
+            </select>
+            <small class="text-muted">Для выбора нескольких товаров удерживайте Ctrl (Windows) или Command (Mac)</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Добавить акцию</button>
+        <a href="admin_panel.php" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>
+
+<?php include 'footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+__________________________________________________________________________
+
+Админ панель. (admin_panel.php)
+
+<?php
+session_start();
+require 'db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['is_admin'] != 1) {
+    header('Location: login.php');
+    exit;
+}
+
+$products = $pdo->query("SELECT * FROM products")->fetchAll();
+
+
+
+$reviewsStmt = $pdo->query("
+    SELECT r.id, r.comment, r.rating, r.created_at, u.username, p.name AS product_name
+    FROM reviews r
+    JOIN users u ON r.user_id = u.id
+    JOIN products p ON r.product_id = p.id
+    ORDER BY r.created_at DESC
+");
+$reviews = $reviewsStmt->fetchAll();
+
+if (isset($_GET['delete_review_id'])) {
+    $reviewId = (int)$_GET['delete_review_id'];
+    $stmt = $pdo->prepare("DELETE FROM reviews WHERE id = :id");
+    $stmt->execute(['id' => $reviewId]);
+
+    header('Location: admin_panel.php');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администрирование</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<?php include 'header.php'; ?>
+
+<section class="admin-panel py-5">
+    <div class="container">
+        <h1 class="mb-4">Панель администратора</h1>
+        <div class="mb-5">
+            <h2 class="mb-3">Управление Заказами</h2>
+            <a href="orders_admin.php" class="btn btn-primary mb-3">Заказы</a>
+        </div>
+
+        <!-- Управление акциями -->
+        <div class="mb-5">
+            <h2 class="mb-3">Управление акциями</h2>
+            <a href="add_promotion.php" class="btn btn-primary mb-3">Добавить акцию</a>
+
+            <?php
+            $promotions = $pdo->query("
+        SELECT p.*, COUNT(pp.product_id) as product_count 
+        FROM promotions p
+        LEFT JOIN promotion_products pp ON p.id = pp.promotion_id
+        GROUP BY p.id
+        ORDER BY p.start_date DESC
+    ")->fetchAll();
+            ?>
+
+            <?php if ($promotions): ?>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Название</th>
+                            <th>Скидка</th>
+                            <th>Период</th>
+                            <th>Товаров</th>
+                            <th>Действия</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($promotions as $promotion): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($promotion['id']); ?></td>
+                                <td><?php echo htmlspecialchars($promotion['title']); ?></td>
+                                <td><?php echo htmlspecialchars($promotion['discount_percent']); ?>%</td>
+                                <td>
+                                    <?php
+                                    echo date('d.m.Y', strtotime($promotion['start_date'])) . ' - ' .
+                                        date('d.m.Y', strtotime($promotion['end_date']));
+                                    ?>
+                                </td>
+                                <td><?php echo htmlspecialchars($promotion['product_count']); ?></td>
+                                <td>
+                                    <a href="edit_promotion.php?id=<?php echo $promotion['id']; ?>" class="btn btn-warning btn-sm">Изменить</a>
+                                    <a href="delete_promotion.php?id=<?php echo $promotion['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Вы уверены, что хотите удалить эту акцию?')">Удалить</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            <?php else: ?>
+                <p class="text-muted">Акций пока нет.</p>
+            <?php endif; ?>
+        </div>
+
+        <!-- Управление товарами -->
+        <div class="mb-5">
+            <h2 class="mb-3">Управление товарами</h2>
+            <a href="add_product.php" class="btn btn-primary mb-3">Добавить товар</a>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                        <th>Действия</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($products as $product): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($product['id']); ?></td>
+                            <td><?php echo htmlspecialchars($product['name']); ?></td>
+                            <td><?php echo htmlspecialchars($product['price']); ?> руб.</td>
+                            <td><?php echo htmlspecialchars($product['stock']); ?></td>
+                            <td>
+                                <a href="edit_product.php?id=<?php echo $product['id']; ?>" class="btn btn-warning btn-sm">Изменить</a>
+                                <a href="delete_product.php?id=<?php echo $product['id']; ?>" class="btn btn-danger btn-sm">Удалить</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Управление отзывами -->
+        <div>
+            <h2 class="mb-3">Отзывы</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Товар</th>
+                        <th>Пользователь</th>
+                        <th>Рейтинг</th>
+                        <th>Комментарий</th>
+                        <th>Дата</th>
+                        <th>Действия</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($reviews as $review): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($review['id']); ?></td>
+                            <td><?php echo htmlspecialchars($review['product_name']); ?></td>
+                            <td><?php echo htmlspecialchars($review['username']); ?></td>
+                            <td><?php echo htmlspecialchars($review['rating']); ?> из 5</td>
+                            <td><?php echo htmlspecialchars($review['comment']); ?></td>
+                            <td><?php echo htmlspecialchars($review['created_at']); ?></td>
+                            <td>
+                                <a href="admin_panel.php?delete_review_id=<?php echo $review['id']; ?>" class="btn btn-danger btn-sm">Удалить</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php include 'footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+___________________________________________________________________________
+
+Подключение ДБ. (db.php)
+
+<?php
+$host = 'localhost';
+$db = 'u3115790_default';
+$user = 'u3115790_default';
+$pass = '85wzB6ngV0W8Wiov';
+$charset = 'utf8mb4';
+
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
+
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (PDOException $e) {
+    die('Ошибка подключения к базе данных: ' . $e->getMessage());
+}
+?>
+
+__________________________________________________________________________
+
+Удаление продукта (delete_product.php)
+
+<?php
+session_start();
+require 'db.php';
+
+// Проверка прав администратора
+if (!isset($_SESSION['user']) || $_SESSION['is_admin'] != 1) {
+    header('Location: login.php');
+    exit;
+}
+
+// Удаление товара
+$id = $_GET['id'];
+$stmt = $pdo->prepare("DELETE FROM products WHERE id = :id");
+$stmt->execute(['id' => $id]);
+
+header("Location: admin_panel.php");
+exit;
+?>
+
+__________________________________________________________________________
+
+Удаление промоушен. (delete_promotion.php)
+
+<?php
+session_start();
+require 'db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['is_admin'] != 1) {
+    header('Location: login.php');
+    exit;
+}
+
+if (!isset($_GET['id'])) {
+    header('Location: admin_panel.php');
+    exit;
+}
+
+$promotionId = (int)$_GET['id'];
+
+// Получаем информацию об акции для удаления изображения
+$promotion = $pdo->prepare("SELECT image FROM promotions WHERE id = ?");
+$promotion->execute([$promotionId]);
+$promotion = $promotion->fetch();
+
+try {
+    $pdo->beginTransaction();
+
+    // Удаляем связи с товарами
+    $stmt = $pdo->prepare("DELETE FROM promotion_products WHERE promotion_id = ?");
+    $stmt->execute([$promotionId]);
+
+    // Удаляем саму акцию
+    $stmt = $pdo->prepare("DELETE FROM promotions WHERE id = ?");
+    $stmt->execute([$promotionId]);
+
+    // Удаляем изображение, если оно есть
+    if ($promotion && $promotion['image'] && file_exists('../' . $promotion['image'])) {
+        unlink('../' . $promotion['image']);
+    }
+
+    $pdo->commit();
+} catch (Exception $e) {
+    $pdo->rollBack();
+}
+
+header('Location: admin_panel.php');
+exit;
+?>
+
+__________________________________________________________________________
+
+
+(edit_product.php)
+
+<?php
+session_start();
+require 'db.php';
+
+// Проверка прав администратора
+if (!isset($_SESSION['user']) || $_SESSION['is_admin'] != 1) {
+    header('Location: login.php');
+    exit;
+}
+
+// Получение данных товара
+$id = $_GET['id'];
+$stmt = $pdo->prepare("SELECT * FROM products WHERE id = :id");
+$stmt->execute(['id' => $id]);
+$product = $stmt->fetch();
+
+if (!$product) {
+    die('Товар не найден.');
+}
+
+// Обновление данных товара
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+    $price = $_POST['price'];
+    $stock = $_POST['stock'];
+    $image = $_FILES['image'];
+
+    $updateQuery = "UPDATE products SET name = :name, description = :description, price = :price, stock = :stock";
+    $params = [
+        'name' => $name,
+        'description' => $description,
+        'price' => $price,
+        'stock' => $stock,
+    ];
+
+    if ($image['size'] > 0) {
+        $targetDir = 'img/';
+        $fileName = basename($image['name']);
+        $targetFilePath = $targetDir . $fileName;
+
+        if (move_uploaded_file($image['tmp_name'], $targetFilePath)) {
+            $updateQuery .= ", image = :image";
+            $params['image'] = $fileName;
+        }
+    }
+
+    $updateQuery .= " WHERE id = :id";
+    $params['id'] = $id;
+
+    $stmt = $pdo->prepare($updateQuery);
+    $stmt->execute($params);
+
+    header("Location: admin_panel.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать товар</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<?php include 'header.php'; ?>
+
+<section class="auth-section py-5">
+    <div class="container">
+        <div class="auth-container mx-auto p-4 border rounded shadow-lg" style="max-width: 600px;">
+            <h1 class="text-center mb-4">Редактировать товар</h1>
+            <form method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Название товара</label>
+                    <input type="text" name="name" id="name" class="form-control" value="<?php echo htmlspecialchars($product['name']); ?>" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Описание</label>
+                    <textarea name="description" id="description" class="form-control" rows="4" required><?php echo htmlspecialchars($product['description']); ?></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="price" class="form-label">Цена</label>
+                    <input type="number" name="price" id="price" class="form-control" value="<?php echo htmlspecialchars($product['price']); ?>" step="0.01" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="stock" class="form-label">Количество на складе</label>
+                    <input type="number" name="stock" id="stock" class="form-control" value="<?php echo htmlspecialchars($product['stock']); ?>" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Изображение</label>
+                    <input type="file" name="image" id="image" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Сохранить изменения</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<?php include 'footer.php'; ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+_________________________________________________________________________
+
+Добавление промоушен.  (edit_promotion.php)
+
+<?php
+session_start();
+require 'db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['is_admin'] != 1) {
+    header('Location: login.php');
+    exit;
+}
+
+if (!isset($_GET['id'])) {
+    header('Location: admin_panel.php');
+    exit;
+}
+
+$promotionId = (int)$_GET['id'];
+$promotion = $pdo->prepare("SELECT * FROM promotions WHERE id = ?");
+$promotion->execute([$promotionId]);
+$promotion = $promotion->fetch();
+
+if (!$promotion) {
+    header('Location: admin_panel.php');
+    exit;
+}
+
+$products = $pdo->query("SELECT id, name FROM products")->fetchAll();
+$selectedProducts = $pdo->prepare("SELECT product_id FROM promotion_products WHERE promotion_id = ?");
+$selectedProducts->execute([$promotionId]);
+$selectedProducts = $selectedProducts->fetchAll(PDO::FETCH_COLUMN);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $discountPercent = (int)$_POST['discount_percent'];
+    $startDate = $_POST['start_date'];
+    $endDate = $_POST['end_date'];
+    $newSelectedProducts = $_POST['products'] ?? [];
+
+    // Загрузка изображения
+    $imagePath = $promotion['image'];
+    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        $uploadDir = '../img/promotions/';
+        if (!file_exists($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
+        }
+
+        // Удаляем старое изображение, если оно есть
+        if ($imagePath && file_exists('../' . $imagePath)) {
+            unlink('../' . $imagePath);
+        }
+
+        $extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+        $filename = uniqid() . '.' . $extension;
+        $destination = $uploadDir . $filename;
+
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $destination)) {
+            $imagePath = 'img/promotions/' . $filename;
+        }
+    }
+
+    try {
+        $pdo->beginTransaction();
+
+        // Обновляем акцию
+        $stmt = $pdo->prepare("
+            UPDATE promotions 
+            SET title = :title, description = :description, discount_percent = :discount_percent, 
+                start_date = :start_date, end_date = :end_date, image = :image
+            WHERE id = :id
+        ");
+        $stmt->execute([
+            ':title' => $title,
+            ':description' => $description,
+            ':discount_percent' => $discountPercent,
+            ':start_date' => $startDate,
+            ':end_date' => $endDate,
+            ':image' => $imagePath,
+            ':id' => $promotionId
+        ]);
+
+        // Удаляем старые связи с товарами
+        $stmt = $pdo->prepare("DELETE FROM promotion_products WHERE promotion_id = ?");
+        $stmt->execute([$promotionId]);
+
+        // Добавляем новые связи с товарами
+        if (!empty($newSelectedProducts)) {
+            $stmt = $pdo->prepare("INSERT INTO promotion_products (promotion_id, product_id) VALUES (:promotion_id, :product_id)");
+            foreach ($newSelectedProducts as $productId) {
+                $stmt->execute([
+                    ':promotion_id' => $promotionId,
+                    ':product_id' => $productId
+                ]);
+            }
+        }
+
+        $pdo->commit();
+        header('Location: admin_panel.php');
+        exit;
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        $error = "Ошибка при обновлении акции: " . $e->getMessage();
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать акцию</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<?php include 'header.php'; ?>
+
+<div class="container py-5">
+    <h1 class="mb-4">Редактировать акцию</h1>
+
+    <?php if (isset($error)): ?>
+        <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
+    <?php endif; ?>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Название акции</label>
+            <input type="text" class="form-control" id="title" name="title" value="<?php echo htmlspecialchars($promotion['title']); ?>" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Описание акции</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required><?php echo htmlspecialchars($promotion['description']); ?></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="discount_percent" class="form-label">Скидка в процентах</label>
+            <input type="number" class="form-control" id="discount_percent" name="discount_percent" min="1" max="100" value="<?php echo $promotion['discount_percent']; ?>" required>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="start_date" class="form-label">Дата начала</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" value="<?php echo $promotion['start_date']; ?>" required>
+            </div>
+            <div class="col-md-6">
+                <label for="end_date" class="form-label">Дата окончания</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" value="<?php echo $promotion['end_date']; ?>" required>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Изображение для акции</label>
+            <?php if ($promotion['image']): ?>
+                <div class="mb-2">
+                    <img src="../<?php echo htmlspecialchars($promotion['image']); ?>" alt="Текущее изображение" style="max-height: 200px;">
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" id="delete_image" name="delete_image">
+                        <label class="form-check-label" for="delete_image">Удалить текущее изображение</label>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <input type="file" class="form-control" id="image" name="image">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Товары, участвующие в акции</label>
+            <select class="form-select" name="products[]" multiple size="5">
+                <?php foreach ($products as $product): ?>
+                    <option value="<?php echo $product['id']; ?>" <?php echo in_array($product['id'], $selectedProducts) ? 'selected' : ''; ?>>
+                        <?php echo htmlspecialchars($product['name']); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <small class="text-muted">Для выбора нескольких товаров удерживайте Ctrl (Windows) или Command (Mac)</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+        <a href="admin_panel.php" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>
+
+<?php include 'footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+__________________________________________________________________________
+
+
+Футер.    (footer.php)
+
+<footer class="footer">
+    <div class="wrapper">
+        <p class="text-small">Clay Dishes © 2024</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</footer>
+
+_________________________________________________________________________
+
+Хедер.  (header.php)
+
+<header class="header">
+    <div class="header-logo">
+        <img src="../img/claydisheslogo.svg" alt="Логотип">
+        <span class="text-large">Clay Dishes</span>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Кнопка меню для мобильных экранов -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Меню -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.php">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../magazin.php">Каталог</a>
+                    </li>
+                    <?php if (isset($_SESSION['user'])): ?>
+                        <?php if ($_SESSION['is_admin'] == 1): ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../php/admin_panel.php">Администрирование</a>
+                            </li>
+                        <?php endif; ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../logout.php">Выход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../profile.php">Профиль</a>
+                        </li>
+                        <img src="../img/profile.svg" height="40" alt="profile logo">
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../login.php">Вход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../reg.php">Регистрация</a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+_______________________________________________________________
+
+Иные детали.   (order_details.php)
+
+<?php
+session_start();
+require 'db.php';
+
+// Проверка авторизации
+if (!isset($_SESSION['user'])) {
+    header('Location: ../login.php');
+    exit;
+}
+
+$orderId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+
+// Получаем детали заказа
+$stmt = $pdo->prepare("
+    SELECT o.id, o.user_id, o.total, o.status, o.created_at, u.username
+    FROM orders o
+    JOIN users u ON o.user_id = u.id
+    WHERE o.id = :order_id
+");
+$stmt->execute(['order_id' => $orderId]);
+$order = $stmt->fetch();
+
+// Проверка прав доступа
+if (!$order || ($order['user_id'] != $_SESSION['user_id'] && $_SESSION['is_admin'] != 1)) {
+    die('Нет доступа или заказ не найден.');
+}
+
+// Получаем товары в заказе
+$stmt = $pdo->prepare("
+    SELECT oi.product_id, p.name, oi.quantity, oi.price
+    FROM order_items oi
+    JOIN products p ON oi.product_id = p.id
+    WHERE oi.order_id = :order_id
+");
+$stmt->execute(['order_id' => $orderId]);
+$orderItems = $stmt->fetchAll();
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали заказа</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<?php include 'header.php'; ?>
+
+<section class="order-details py-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Детали заказа №<?php echo $order['id']; ?></h1>
+
+        <div class="mb-4">
+            <p><strong>Пользователь:</strong> <?php echo htmlspecialchars($order['username']); ?></p>
+            <p><strong>Дата создания:</strong> <?php echo $order['created_at']; ?></p>
+            <p><strong>Общая сумма:</strong> <?php echo $order['total']; ?> руб.</p>
+            <p><strong>Статус:</strong>
+                <span class="badge bg-<?php echo ($order['status'] == 'pending' ? 'warning' : ($order['status'] == 'completed' ? 'success' : 'danger')); ?>">
+                    <?php echo ucfirst($order['status']); ?>
+                </span>
+            </p>
+        </div>
+
+        <h3 class="mb-3">Товары в заказе</h3>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Товар</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Количество</th>
+                <th scope="col">Сумма</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($orderItems as $item): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($item['name']); ?></td>
+                    <td><?php echo $item['price']; ?> руб.</td>
+                    <td><?php echo $item['quantity']; ?></td>
+                    <td><?php echo $item['price'] * $item['quantity']; ?> руб.</td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+
+        <?php if ($_SESSION['is_admin'] == 1): ?>
+            <!-- Формуля для изменения статуса заказа (только для администратора) -->
+            <form method="POST" class="mt-4">
+                <div class="mb-3">
+                    <label for="status" class="form-label">Изменить статус</label>
+                    <select name="status" id="status" class="form-select">
+                        <option value="pending" <?php echo ($order['status'] == 'pending') ? 'selected' : ''; ?>>Ожидает</option>
+                        <option value="completed" <?php echo ($order['status'] == 'completed') ? 'selected' : ''; ?>>Завершен</option>
+                        <option value="canceled" <?php echo ($order['status'] == 'canceled') ? 'selected' : ''; ?>>Отменен</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Обновить статус</button>
+            </form>
+        <?php endif; ?>
+    </div>
+</section>
+
+<?php include 'footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+______________________________________________________________________
+
+иные админ.  (orders_admin.php)
+
+<?php
+session_start();
+require 'db.php';
+
+if (!isset($_SESSION['user']) || $_SESSION['is_admin'] != 1) {
+    header('Location: login.php');
+    exit;
+}
+
+$stmt = $pdo->prepare("
+    SELECT o.id, o.user_id, o.total, o.status, o.created_at, u.username
+    FROM orders o
+    JOIN users u ON o.user_id = u.id
+");
+$stmt->execute();
+$orders = $stmt->fetchAll();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id'], $_POST['status'])) {
+    $orderId = (int)$_POST['order_id'];
+    $status = $_POST['status'];
+
+    $stmt = $pdo->prepare("UPDATE orders SET status = :status WHERE id = :id");
+    $stmt->execute(['status' => $status, 'id' => $orderId]);
+
+    header('Location: orders_admin.php');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление заказами</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<?php include 'header.php'; ?>
+
+<section class="admin-orders py-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Управление заказами</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID заказа</th>
+                <th>Пользователь</th>
+                <th>Сумма</th>
+                <th>Статус</th>
+                <th>Действия</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($orders as $order): ?>
+                <tr>
+                    <td><?php echo $order['id']; ?></td>
+                    <td><?php echo $order['username']; ?></td>
+                    <td><?php echo $order['total']; ?> руб.</td>
+                    <td>
+                        <form method="POST">
+                            <input type="hidden" name="order_id" value="<?php echo $order['id']; ?>">
+                            <select name="status" class="form-select" onchange="this.form.submit()">
+                                <option value="pending" <?php echo $order['status'] === 'pending' ? 'selected' : ''; ?>>Ожидает</option>
+                                <option value="completed" <?php echo $order['status'] === 'completed' ? 'selected' : ''; ?>>Завершен</option>
+                                <option value="canceled" <?php echo $order['status'] === 'canceled' ? 'selected' : ''; ?>>Отменен</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="order_details.php?id=<?php echo $order['id']; ?>" class="btn btn-info">Подробнее</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<?php include 'footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+________________________________________________________________________
+
+иные  (orders.php)
+
+<?php
+session_start();
+require 'db.php';
+
+// Проверка авторизации
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
+
+$userId = (int)$_SESSION['user_id'];
+
+// Получение заказов пользователя
+$stmt = $pdo->prepare("
+    SELECT o.id, o.total, o.status, o.created_at
+    FROM orders o
+    WHERE o.user_id = :user_id
+");
+$stmt->execute(['user_id' => $userId]);
+$orders = $stmt->fetchAll();
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои заказы</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<?php include 'header.php'; ?>
+
+<section class="orders py-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Мои заказы</h1>
+
+        <?php if (count($orders) > 0): ?>
+            <div class="list-group">
+                <?php foreach ($orders as $order): ?>
+                    <div class="list-group-item">
+                        <h5 class="mb-3">Заказ №<?php echo $order['id']; ?></h5>
+                        <p>Дата: <?php echo $order['created_at']; ?></p>
+                        <p>Общая сумма: <?php echo $order['total']; ?> руб.</p>
+                        <p>Статус: <span class="badge bg-<?php echo $order['status'] === 'pending' ? 'warning' : ($order['status'] === 'completed' ? 'success' : 'danger'); ?>">
+                            <?php echo ucfirst($order['status']); ?>
+                        </span></p>
+                        <a href="order_details.php?id=<?php echo $order['id']; ?>" class="btn btn-info">Подробнее</a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <p class="text-center">У вас нет заказов.</p>
+        <?php endif; ?>
+    </div>
+</section>
+
+<?php include 'footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+________________________________________________________________________
+
+ремув.   (remove_favorite.php)
+
+<?php
+session_start();
+require 'db.php';
+
+if (!isset($_SESSION['user'])) {
+    header('Location: ../login.php');
+    exit;
+}
+
+if (!isset($_POST['product_id'])) {
+    header('Location: ../profile.php');
+    exit;
+}
+
+$userId = (int)$_SESSION['user_id'];
+$productId = (int)$_POST['product_id'];
+
+// Удаляем конкретный товар из избранного
+$stmt = $pdo->prepare("DELETE FROM favorites WHERE user_id = ? AND product_id = ?");
+$stmt->execute([$userId, $productId]);
+
+header('Location: ../profile.php');
+exit;
+?>
+
+______________________________________________________________________
+
+карт.  (cart.php)
+
+<?php
+ob_start();
+session_start();
+require 'php/db.php';
+
+if (!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    exit;
+}
+
+$userId = (int)$_SESSION['user_id'];
+
+// Получаем товары в корзине с информацией о скидках
+$stmt = $pdo->prepare("
+    SELECT 
+        c.id as cart_id,
+        p.id as product_id, 
+        p.name, 
+        p.price, 
+        c.quantity, 
+        p.image,
+        COALESCE(
+            (SELECT MAX(pr.discount_percent) 
+             FROM promotions pr 
+             JOIN promotion_products pp ON pr.id = pp.promotion_id
+             WHERE pp.product_id = p.id 
+             AND pr.start_date <= CURRENT_DATE() 
+             AND pr.end_date >= CURRENT_DATE()
+             AND pr.is_active = 1),
+            0
+        ) AS discount_percent
+    FROM cart c
+    JOIN products p ON c.product_id = p.id
+    WHERE c.user_id = :user_id
+");
+$stmt->execute(['user_id' => $userId]);
+$cartItems = $stmt->fetchAll();
+
+// Рассчитываем итоговые суммы
+$total = 0;
+$totalDiscount = 0;
+foreach ($cartItems as $key => $item) {
+    $cartItems[$key]['discounted_price'] = $item['price'] * (1 - $item['discount_percent'] / 100);
+    $cartItems[$key]['total_price'] = $cartItems[$key]['discounted_price'] * $item['quantity'];
+    $cartItems[$key]['total_original_price'] = $item['price'] * $item['quantity'];
+
+    $total += $cartItems[$key]['total_price'];
+    $totalDiscount += $cartItems[$key]['total_original_price'] - $cartItems[$key]['total_price'];
+}
+unset($item);
+
+// Удаление товара из корзины
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_item'])) {
+    $cartId = (int)$_POST['cart_id'];
+    $quantityToRemove = (int)$_POST['delete_quantity'];
+
+    if ($cartId > 0 && $quantityToRemove > 0) {
+        try {
+            $pdo->beginTransaction();
+
+            // Получаем информацию о товаре в корзине
+            $stmt = $pdo->prepare("
+                SELECT quantity, product_id 
+                FROM cart 
+                WHERE id = ? AND user_id = ?
+            ");
+            $stmt->execute([$cartId, $userId]);
+            $cartItem = $stmt->fetch();
+
+            if ($cartItem) {
+                $newQuantity = $cartItem['quantity'] - $quantityToRemove;
+                
+                if ($newQuantity > 0) {
+                    // Уменьшаем количество
+                    $stmt = $pdo->prepare("UPDATE cart SET quantity = ? WHERE id = ?");
+                    $stmt->execute([$newQuantity, $cartId]);
+                } else {
+                    // Удаляем запись полностью
+                    $stmt = $pdo->prepare("DELETE FROM cart WHERE id = ?");
+                    $stmt->execute([$cartId]);
+                }
+                
+                // Возвращаем товар на склад
+                $stmt = $pdo->prepare("UPDATE products SET stock = stock + ? WHERE id = ?");
+                $stmt->execute([$quantityToRemove, $cartItem['product_id']]);
+            }
+            
+            $pdo->commit();
+        } catch (Exception $e) {
+            $pdo->rollBack();
+            $_SESSION['error'] = "Ошибка при удалении товара: " . $e->getMessage();
+        }
+    }
+    header('Location: cart.php');
+    exit;
+}
+
+// Создание заказа
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_order'])) {
+    try {
+        $pdo->beginTransaction();
+
+        // Создаем заказ
+        $stmt = $pdo->prepare("
+            INSERT INTO orders (user_id, total, status, created_at) 
+            VALUES (:user_id, :total, 'pending', CURRENT_TIMESTAMP)
+        ");
+        $stmt->execute([
+            'user_id' => $userId,
+            'total' => $total
+        ]);
+        $orderId = $pdo->lastInsertId();
+
+        // Добавляем товары в заказ
+        foreach ($cartItems as $item) {
+            $stmt = $pdo->prepare("
+                INSERT INTO order_items (order_id, product_id, quantity, price) 
+                VALUES (:order_id, :product_id, :quantity, :price)
+            ");
+            $stmt->execute([
+                'order_id' => $orderId,
+                'product_id' => $item['product_id'],
+                'quantity' => $item['quantity'],
+                'price' => $item['discounted_price']
+            ]);
+        }
+
+        // Очищаем корзину
+        $stmt = $pdo->prepare("DELETE FROM cart WHERE user_id = :user_id");
+        $stmt->execute(['user_id' => $userId]);
+
+        $pdo->commit();
+        header('Location: php/orders.php');
+        exit;
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        $_SESSION['error'] = "Ошибка при создании заказа: " . $e->getMessage();
+        header('Location: cart.php');
+        exit;
+    }
+}
+ob_end_flush();
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .discounted-price {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+<?php include 'php/header.php'; ?>
+
+<?php if (isset($_SESSION['error'])): ?>
+    <div class="alert alert-danger"><?= $_SESSION['error'] ?></div>
+    <?php unset($_SESSION['error']); ?>
+<?php endif; ?>
+
+<section class="cart py-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Корзина</h1>
+
+        <?php if (count($cartItems) > 0): ?>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Товар</th>
+                            <th>Цена</th>
+                            <th>Количество</th>
+                            <th>Сумма</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($cartItems as $item): ?>
+                        <tr>
+                            <td class="align-middle">
+                                <div class="d-flex align-items-center">
+                                    <img src="<?= htmlspecialchars($item['image']) ?>" 
+                                         alt="<?= htmlspecialchars($item['name']) ?>" 
+                                         class="img-thumbnail me-3" 
+                                         style="width: 60px; height: 60px; object-fit: cover;">
+                                    <div>
+                                        <?= htmlspecialchars($item['name']) ?>
+                                        <?php if ($item['discount_percent'] > 0): ?>
+                                            <span class="badge bg-danger ms-2">-<?= $item['discount_percent'] ?>%</span>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle">
+                                <?php if ($item['discount_percent'] > 0): ?>
+                                    <span class="discounted-price"><?= number_format($item['discounted_price'], 2, '.', ' ') ?> руб.</span><br>
+                                    <span class="original-price"><?= number_format($item['price'], 2, '.', ' ') ?> руб.</span>
+                                <?php else: ?>
+                                    <?= number_format($item['price'], 2, '.', ' ') ?> руб.
+                                <?php endif; ?>
+                            </td>
+                            <td class="align-middle"><?= $item['quantity'] ?></td>
+                            <td class="align-middle">
+                                <?php if ($item['discount_percent'] > 0): ?>
+                                    <span class="discounted-price"><?= number_format($item['total_price'], 2, '.', ' ') ?> руб.</span><br>
+                                    <span class="original-price"><?= number_format($item['total_original_price'], 2, '.', ' ') ?> руб.</span>
+                                <?php else: ?>
+                                    <?= number_format($item['total_original_price'], 2, '.', ' ') ?> руб.
+                                <?php endif; ?>
+                            </td>
+                            <td class="align-middle">
+                                <form method="POST" class="d-flex">
+                                    <input type="hidden" name="cart_id" value="<?= $item['cart_id'] ?>">
+                                    <input type="number" name="delete_quantity"
+                                           min="1" max="<?= $item['quantity'] ?>"
+                                           value="1" class="form-control me-2" style="width: 70px;">
+                                    <button type="submit" name="delete_item" class="btn btn-danger">Удалить</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                    <tfoot class="table-group-divider">
+                        <tr>
+                            <th colspan="3" class="text-end">Итого без скидки:</th>
+                            <th><?= number_format($total + $totalDiscount, 2, '.', ' ') ?> руб.</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="text-end">Скидка:</th>
+                            <th class="text-danger">-<?= number_format($totalDiscount, 2, '.', ' ') ?> руб.</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="text-end">Итого к оплате:</th>
+                            <th class="fs-5"><?= number_format($total, 2, '.', ' ') ?> руб.</th>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="text-center mt-4">
+                <form method="POST">
+                    <button type="submit" name="create_order" class="btn btn-success btn-lg px-5 py-3">
+                        Оформить заказ
+                    </button>
+                </form>
+            </div>
+        <?php else: ?>
+            <div class="text-center py-5">
+                <h4 class="text-muted mb-4">Ваша корзина пуста</h4>
+                <a href="magazin.php" class="btn btn-primary">Перейти в каталог</a>
+            </div>
+        <?php endif; ?>
+    </div>
+</section>
+
+<?php include 'php/footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+______________________________________________________________________
+
+SQL.  (clay_dishes.sql)
+
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Хост: 127.0.0.1:3306
+-- Время создания: Ноя 29 2024 г., 00:31
+-- Версия сервера: 8.0.30
+-- Версия PHP: 8.0.22
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `clay_dishes`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `quantity` int DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `comments`
+--
+
+CREATE TABLE `comments` (
+  `id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `comment` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `favorites`
+--
+
+CREATE TABLE `favorites` (
+  `id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `product_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `favorites`
+--
+
+INSERT INTO `favorites` (`id`, `user_id`, `product_id`) VALUES
+(4, 2, 1),
+(7, 3, 2),
+(6, 3, 30);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `total` decimal(10,2) NOT NULL,
+  `status` enum('pending','completed','canceled') COLLATE utf8mb4_general_ci DEFAULT 'pending',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `total`, `status`, `created_at`) VALUES
+(4, 3, '12000.00', 'pending', '2024-11-28 21:26:50');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `order_items`
+--
+
+CREATE TABLE `order_items` (
+  `id` int NOT NULL,
+  `order_id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `quantity` int NOT NULL,
+  `price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `order_items`
+--
+
+INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`, `price`) VALUES
+(6, 4, 30, 1, '12000.00');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `products`
+--
+
+CREATE TABLE `products` (
+  `id` int NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `price` decimal(10,2) NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `stock` int NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`, `stock`) VALUES
+(1, 'Подарочный набор \"Hygge\"', 'Подарочный набор \"Hygge Huiagi\" для настоящих мужиков', '5000.01', 'img/p1.png', 60),
+(2, 'Набор тарелок \"Leviosa\"', 'Набор тарелок \"Leviosa\"', '5550.00', 'img/p2.png', 0),
+(3, 'Подарочный набор \"Lolito\"', 'Подарочный набор \"Lolito\"', '8990.00', 'img/p3.png', 0),
+(4, 'Подарочный набор \"Star\"', 'Подарочный набор \"Star\"', '7890.00', 'img/p4.png', 1000),
+(5, 'Набор посуды \"Lolito\"', 'Набор посуды \"Lolito\"', '14990.00', 'img/p5.png', 100),
+(6, 'Подарочный набор \"Respira\"', 'Подарочный набор \"Respira\"', '5990.00', 'img/p6.png', 0),
+(7, 'Подарочный набор \"Leviosa\"', 'Подарочный набор \"Leviosa\"', '28890.00', 'img/p7.png', 0),
+(8, 'Набор посуды', 'Набор посуды', '5990.00', 'img/p8.png', 0),
+(9, 'Тарелка \"Green\"', 'Тарелка \"Green\"', '890.00', 'img/t1.png', 0),
+(10, 'Подарочный набор \"Hyg\"', 'Подарочный набор \"Hyg\"', '30990.00', 'img/p9.png', 0),
+(11, 'Набор из 3 тарелок \"Rosa\"', 'Набор из 3 тарелок \"Rosa\"', '2750.00', 'img/t3.png', 0),
+(12, 'Подарочный набор \"Star\"', 'Подарочный набор \"Star\"', '1190.00', 'img/t4.png', 0),
+(13, 'Пиала \"Stars\"', 'Пиала \"Stars\"', '1350.00', 'img/t5.png', 0),
+(14, 'Набор посуды \"Rewoo\"', 'Набор посуды \"Rewoo\"', '4500.00', 'img/t6.png', 0),
+(15, 'Набор из 7 глубоких тарелок', 'Набор из 7 глубоких тарелок', '4900.00', 'img/t7.png', 0),
+(16, 'Набор из 12 тарелок', 'Набор из 12 тарелок', '9950.00', 'img/t8.png', 0),
+(17, 'Набор из 2 кружек \"love\"', 'Набор из 2 кружек \"love\"', '2490.00', 'img/k1.png', 0),
+(18, 'Набор из 4 кружек \"Home\"', 'Набор из 4 кружек \"Home\"', '3990.00', 'img/k2.png', 0),
+(19, 'Кружка \"Trix\"', 'Кружка \"Trix\"', '990.00', 'img/k3.png', 0),
+(20, 'Кружка \"Kora\"', 'Кружка \"Kora\"', '1200.00', 'img/k4.png', 0),
+(21, 'Набор из 2 кружек \"Sofa\"', 'Набор из 2 кружек \"Sofa\"', '1490.00', 'img/k5.png', 0),
+(22, 'Набор из 2 кружек \"Blue\"', 'Набор из 2 кружек \"Blue\"', '1890.00', 'img/k6.png', 0),
+(23, 'Кружка \"Kaktus\"', 'Кружка \"Kaktus\"', '1190.00', 'img/k7.png', 0),
+(24, 'Кружка \"bool\"', 'Кружка \"bool\"', '9950.00', 'img/k8.png', 0),
+(26, 'Набор посуды \"Sea\"', 'Набор посуды \"Sea\"', '7000.00', 'img/sale2.png', 0),
+(27, 'Набор посуды \"Elle\"', 'Набор посуды \"Elle\"', '9000.00', 'img/sale3.png', 0),
+(28, 'Лимонница \"Woow\"', 'Лимонница \"Woow\"', '5550.00', 'img/sale4.png', 998),
+(29, 'Чайный набор \"Cyma\"', 'Армуды – традиционные стаканы грушевидной формы для подачи чая в Азербайджане, Турции и многих других восточных странах. Кроме эстетических преимуществ армуды имеют и теплофизические. В верхней части стакана чай быстрее остывает, а в нижней дольше хранится тепло за счет узкой \"талии\" стакана. Имея такую специальную форму армуды обеспечивают идеальную температуру употребления напитка. Набор состоит из 6 стаканов и 6 блюдец. Изготовлен из качественного стекла. Прекрасно подойдет для подачи чая гостям, так и для ежедневного использования. \r\n\r\nОбъем стаканов - 120 мл;\r\nДиаметр блюдца - 14,5 см', '10999.00', 'img/chaiphoto.jpg', 200),
+(30, 'Чайный набор \"Cucri\"', 'Набор состоит из 6 стаканов и 6 блюдец. Изготовлен из качественного стекла. Прекрасно подойдет для подачи чая гостям, так и для ежедневного использования. \r\n\r\nОбъем стаканов - 120 мл;\r\nДиаметр блюдца - 14,5 см', '12000.00', 'img/large_fXLpmbioEyI.jpg', 298),
+(31, 'набор \"Cucri\"', 'tguvwnhlukhwlcuwhnchlui4htnwuilcnhtslhrultlvukhi', '120000.00', 'img/1000_F_621007105_CUEghVzGrLinTvXGaSuQFIZCFNBYzlHB.jpg', 9);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `comment` text COLLATE utf8mb4_general_ci NOT NULL,
+  `rating` tinyint NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ;
+
+--
+-- Дамп данных таблицы `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `product_id`, `user_id`, `comment`, `rating`, `created_at`) VALUES
+(11, 1, 3, 'ksvhklv', 5, '2024-11-28 19:49:13');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `is_admin` tinyint(1) DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `is_admin`, `created_at`) VALUES
+(1, 'admin', '$2y$10$dtbKolfRwhG0gVURFvpHS.kMhjyuY/zVni/yDAbgVhxmQDrWqysEa', 'admin@admin.com', 0, '2024-11-13 17:38:13'),
+(2, 'suomi', '$2y$10$Oj5kjKm3iSpR.YjTfINXkOBsNQF6UZ8ZwbNUpTtsBI5YP9sG/Omjm', 'suomi@suomi.com', 1, '2024-11-28 15:40:12'),
+(3, 'artem', '$2y$10$ZtEdBUXPvaYnIZmL08Eb7OuyUYEVz15Wmc2T1os/rZpmczrak8qh.', 'qwewra@gmail.com', 0, '2024-11-28 19:48:46');
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Индексы таблицы `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Индексы таблицы `favorites`
+--
+ALTER TABLE `favorites`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `user_id` (`user_id`,`product_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Индексы таблицы `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Индексы таблицы `order_items`
+--
+ALTER TABLE `order_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `order_id` (`order_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Индексы таблицы `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT для таблицы `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `favorites`
+--
+ALTER TABLE `favorites`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT для таблицы `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `order_items`
+--
+ALTER TABLE `order_items`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT для таблицы `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT для таблицы `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `comments`
+--
+ALTER TABLE `comments`
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `favorites`
+--
+ALTER TABLE `favorites`
+  ADD CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `order_items`
+--
+ALTER TABLE `order_items`
+  ADD CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `reviews`
+--
+ALTER TABLE `reviews`
+  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+__________________________________________________________________________
+
+индекс. (index.php)
+
+<?php
+session_start();
+require 'php/db.php';
+
+$stmt = $pdo->query("SELECT * FROM products LIMIT 4");
+$popularProducts = $stmt->fetchAll();
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clay Dishes - Главная</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<?php include 'php/header.php'; ?>
+
+<section class="hero-section text-center text-light bg-dark py-5">
+    <div class="container">
+        <h1 class="display-4">Clay Dishes</h1>
+        <p class="lead">Керамическая посуда ручной работы</p>
+        <a href="magazin.php" class="btn btn-primary btn-lg">Перейти в каталог</a>
+    </div>
+</section>
+
+<section class="features-section py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Почему стоит выбрать нас?</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-card p-4 border rounded shadow-sm">
+                    <h5 class="mb-3">Ручная работа</h5>
+                    <p>Каждое изделие уникально, создано с душой и вниманием к деталям.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card p-4 border rounded shadow-sm">
+                    <h5 class="mb-3">Экологичность</h5>
+                    <p>Мы используем только экологически чистые материалы.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card p-4 border rounded shadow-sm">
+                    <h5 class="mb-3">Доставка по всей стране</h5>
+                    <p>Мы доставляем вашу посуду в любую точку страны быстро и надежно.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero-section text-center text-light bg-dark py-5">
+    <div class="container">
+        <!-- Слайдер акций -->
+        <div class="promotions-slider mb-4">
+            <?php
+            $currentDate = date('Y-m-d');
+            $promotions = $pdo->query("
+                SELECT p.* 
+                FROM promotions p
+                WHERE p.start_date <= '$currentDate' AND p.end_date >= '$currentDate' AND p.is_active = 1
+                ORDER BY p.discount_percent DESC
+                LIMIT 5
+            ")->fetchAll();
+
+            if ($promotions):
+                foreach ($promotions as $promotion):
+                    // Получаем все товары из акции
+                    $products = $pdo->prepare("
+                        SELECT pr.id, pr.name, pr.description, pr.price, pr.image, pr.stock 
+                        FROM products pr
+                        JOIN promotion_products pp ON pr.id = pp.product_id
+                        WHERE pp.promotion_id = ?
+                    ");
+                    $products->execute([$promotion['id']]);
+                    $products = $products->fetchAll();
+
+                    // Проверяем, есть ли у авторизованного пользователя товары из акции в корзине
+                    $userHasProductInCart = false;
+                    $productInCart = null;
+
+                    if (isset($_SESSION['user_id']) && !empty($products)) {
+                        $userId = (int)$_SESSION['user_id'];
+                        $productIds = array_column($products, 'id');
+                        $placeholders = implode(',', array_fill(0, count($productIds), '?'));
+
+                        $stmt = $pdo->prepare("
+                            SELECT c.product_id as id, p.name, p.description, p.price, p.image, p.stock
+                            FROM cart c
+                            JOIN products p ON c.product_id = p.id
+                            WHERE c.user_id = ? AND c.product_id IN ($placeholders)
+                            LIMIT 1
+                        ");
+
+                        $params = array_merge([$userId], $productIds);
+                        $stmt->execute($params);
+                        $productInCart = $stmt->fetch();
+
+                        $userHasProductInCart = (bool)$productInCart;
+                    }
+
+                    // Выбираем товар для показа
+                    $productToShow = null;
+                    $message = '';
+
+                    if ($userHasProductInCart && $productInCart) {
+                        $productToShow = $productInCart;
+                        $message = 'Закажите его прямо сейчас!';
+                    } elseif (!empty($products)) {
+                        $productToShow = $products[array_rand($products)];
+                        if (isset($_SESSION['user_id'])) {
+                            $message = 'Самое время посмотреть на что-то новое!';
+                        }
+                    }
+                    ?>
+                    <div class="promotion-slide">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <?php if (!empty($promotion['image'])): ?>
+                                    <img src="<?php echo htmlspecialchars($promotion['image']); ?>" class="img-fluid rounded" alt="<?php echo htmlspecialchars($promotion['title']); ?>">
+                                <?php elseif (!empty($productToShow['image'])): ?>
+                                    <img src="<?php echo htmlspecialchars($productToShow['image']); ?>" class="img-fluid rounded" alt="<?php echo htmlspecialchars($promotion['title']); ?>">
+                                <?php else: ?>
+                                    <img src="img/default-promo.jpg" class="img-fluid rounded" alt="Специальные предложения">
+                                <?php endif; ?>
+                            </div>
+                            <div class="col-md-6">
+                                <h2 class="text-warning">Акция: <?php echo htmlspecialchars($promotion['title']); ?></h2>
+                                <p class="lead"><?php echo htmlspecialchars($promotion['description']); ?></p>
+                                <div class="discount-badge mb-3">
+                                    <span class="badge bg-danger fs-3">-<?php echo htmlspecialchars($promotion['discount_percent']); ?>%</span>
+                                </div>
+
+                                <?php if (!empty($products) && !empty($productToShow)): ?>
+                                    <div class="product-info">
+                                        <h4><?php echo htmlspecialchars($productToShow['name']); ?></h4>
+                                        <?php if (!empty($productToShow['description'])): ?>
+                                            <p class="card-text"><?php echo htmlspecialchars(mb_strimwidth($productToShow['description'], 0, 100, '...')); ?></p>
+                                        <?php endif; ?>
+                                        <p class="price">
+                                            <span class="text-decoration-line-through text-muted me-2"><?php echo number_format($productToShow['price'], 2, '.', ' '); ?> руб.</span>
+                                            <span class="fw-bold fs-4 text-warning"><?php echo number_format($productToShow['price'] * (1 - $promotion['discount_percent'] / 100), 2, '.', ' '); ?> руб.</span>
+                                        </p>
+                                        <?php if (!empty($message)): ?>
+                                            <p class="promo-message text-info"><?php echo $message; ?></p>
+                                        <?php endif; ?>
+                                        <a href="/product.php?id=<?php echo (int)$productToShow['id']; ?>" class="btn btn-primary btn-lg">Подробнее</a>
+                                    </div>
+                                <?php else: ?>
+                                    <p>В этой акции пока нет товаров</p>
+                                    <a href="/magazin.php" class="btn btn-primary btn-lg">Перейти в каталог</a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                endforeach;
+            else:
+                ?>
+                <div class="promotion-slide">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="img/default-promo.jpg" class="img-fluid rounded" alt="Специальные предложения">
+                        </div>
+                        <div class="col-md-6">
+                            <h2>Специальные предложения</h2>
+                            <p class="lead">Скоро здесь появятся новые акции!</p>
+                            <a href="/magazin.php" class="btn btn-primary btn-lg">Перейти в каталог</a>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+
+<!-- тут сделать вывод акций как в каталоге -->
+
+<section class="popular-products-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Популярные товары</h2>
+        <!-- вот тут сделать реально статистику популярных товаров за неделю и их вывод, так же 4 штучки -->
+        <div class="row">
+            <?php foreach ($popularProducts as $product): ?>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="<?php echo htmlspecialchars($product['image']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo htmlspecialchars($product['name']); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($product['description']); ?></p>
+                            <p class="fw-bold"><?php echo htmlspecialchars($product['price']); ?> руб.</p>
+                            <a href="product.php?id=<?php echo $product['id']; ?>" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<section class="about-section text-center py-5">
+    <div class="container">
+        <h2 class="mb-4">О нас</h2>
+        <p>Clay Dishes — это онлайн-магазин керамической посуды, где собраны самые лучшие изделия ручной работы. Мы создаём тепло, уют и атмосферу благополучия в вашем доме.</p>
+        <a href="#footer" class="btn btn-secondary btn-lg">Свяжитесь с нами</a>
+    </div>
+</section>
+
+<?php include 'php/footer.php'; ?>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+_________________________________________________________
+
+Логин.   (login.php)
+
+<?php
+session_start();
+require 'php/db.php';
+
+$error = '';
+$success = '';
+
+// Обработка основной формы авторизации
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+
+    if ($username && $password) {
+        $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username');
+        $stmt->execute(['username' => $username]);
+        $user = $stmt->fetch();
+
+        if ($user && password_verify($password, $user['password'])) {
+            $_SESSION['user'] = $user['username'];
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['is_admin'] = $user['is_admin'];
+            header('Location: ../index.php');
+            exit;
+        } else {
+            $error = 'Неправильное имя пользователя или пароль.';
+        }
+    } else {
+        $error = 'Заполните все поля.';
+    }
+}
+
+// Обработка восстановления пароля (шаг 1 - email)
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reset_email'])) {
+    $email = trim($_POST['reset_email']);
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $stmt = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+        $stmt->execute(['email' => $email]);
+        $user = $stmt->fetch();
+
+        if ($user) {
+            $code = rand(100000, 999999);
+            $_SESSION['reset_code'] = $code;
+            $_SESSION['reset_email'] = $email;
+            $_SESSION['code_expire'] = time() + 1800;
+            $_SESSION['show_password_step'] = true; // Флаг для показа шага с паролем
+
+            // В реальном приложении:
+            mail($email, 'Код подтверждения', "Ваш код подтверждения: $code");
+
+            $success = "Код подтверждения отправлен на $email";
+
+            // Возвращаем JSON для AJAX обработки
+            if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+                echo json_encode(['success' => true, 'message' => $success]);
+                exit;
+            }
+        } else {
+            $error = 'Пользователь с таким email не найден.';
+            if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+                echo json_encode(['success' => false, 'error' => $error]);
+                exit;
+            }
+        }
+    } else {
+        $error = 'Введите корректный email.';
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            echo json_encode(['success' => false, 'error' => $error]);
+            exit;
+        }
+    }
+}
+
+// Обработка восстановления пароля (шаг 2 - код и новый пароль)
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reset_code'])) {
+    $code = trim($_POST['reset_code']);
+    $new_password = trim($_POST['new_password']);
+    $confirm_password = trim($_POST['confirm_password']);
+    $email = $_SESSION['reset_email'] ?? '';
+
+    if (time() > ($_SESSION['code_expire'] ?? 0)) {
+        $error = 'Срок действия кода истёк. Запросите новый код.';
+        unset($_SESSION['reset_code'], $_SESSION['reset_email'], $_SESSION['code_expire'], $_SESSION['show_password_step']);
+    } elseif ($code != ($_SESSION['reset_code'] ?? '')) {
+        $error = 'Неверный код подтверждения.';
+    } elseif ($new_password !== $confirm_password) {
+        $error = 'Пароли не совпадают.';
+    } elseif (strlen($new_password) < 6) {
+        $error = 'Пароль должен содержать минимум 6 символов.';
+    } else {
+        $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+        $stmt = $pdo->prepare('UPDATE users SET password = :password WHERE email = :email');
+        $stmt->execute(['password' => $hashed_password, 'email' => $email]);
+
+        $success = 'Пароль успешно изменён. Теперь вы можете войти с новым паролем.';
+        unset($_SESSION['reset_code'], $_SESSION['reset_email'], $_SESSION['code_expire'], $_SESSION['show_password_step']);
+
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            echo json_encode(['success' => true, 'message' => $success, 'completed' => true]);
+            exit;
+        }
+    }
+
+    if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+        echo json_encode(['success' => false, 'error' => $error]);
+        exit;
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .step {
+            display: none;
+        }
+        .step.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<?php include 'php/header.php'; ?>
+
+<section class="auth-section">
+    <div class="auth-container">
+        <h1 class="text-center mb-4">Вход</h1>
+        <?php if ($error): ?>
+            <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
+        <?php endif; ?>
+        <?php if ($success): ?>
+            <div class="alert alert-success"><?php echo htmlspecialchars($success); ?></div>
+        <?php endif; ?>
+        <form method="POST" class="mb-3">
+            <div class="mb-3">
+                <input type="text" name="username" class="form-control" placeholder="Имя пользователя" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Войти</button>
+        </form>
+        <p class="text-center mt-3">
+            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#resetModal">Забыли пароль?</a>
+        </p>
+    </div>
+</section>
+
+<!-- Модальное окно восстановления пароля -->
+<div class="modal fade" id="resetModal" tabindex="-1" aria-labelledby="resetModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resetModalLabel">Восстановление пароля</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Шаг 1: Ввод email -->
+                <div id="step1" class="step active">
+                    <p>Введите email, указанный при регистрации:</p>
+                    <form id="resetForm1" method="POST">
+                        <div class="mb-3">
+                            <input type="email" name="reset_email" class="form-control" placeholder="Ваш email" required>
+                        </div>
+                        <div id="emailError" class="alert alert-danger d-none"></div>
+                        <button type="submit" class="btn btn-primary w-100">Отправить код</button>
+                    </form>
+                </div>
+
+                <!-- Шаг 2: Ввод кода и нового пароля -->
+                <div id="step2" class="step">
+                    <p>На ваш email отправлен код подтверждения. Введите его и новый пароль:</p>
+                    <form id="resetForm2" method="POST">
+                        <div class="mb-3">
+                            <input type="text" name="reset_code" class="form-control" placeholder="Код подтверждения" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" name="new_password" class="form-control" placeholder="Новый пароль" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" name="confirm_password" class="form-control" placeholder="Повторите пароль" required>
+                        </div>
+                        <div id="passwordError" class="alert alert-danger d-none"></div>
+                        <button type="submit" class="btn btn-primary w-100">Изменить пароль</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Функция для полного закрытия модального окна
+    function closeModal() {
+        const modal = bootstrap.Modal.getInstance(document.getElementById('resetModal'));
+        modal.hide();
+
+        // Удаляем бэкдроп вручную
+        document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.paddingRight = '';
+    }
+
+    // Обработка отправки первой формы (email)
+    document.getElementById("resetForm1").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const errorElement = document.getElementById('emailError');
+        errorElement.classList.add('d-none');
+
+        fetch('', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Переключаем на шаг с паролем
+                    document.getElementById('step1').classList.remove('active');
+                    document.getElementById('step2').classList.add('active');
+
+                    // Показываем сообщение об успехе
+                    const successElement = document.createElement('div');
+                    successElement.className = 'alert alert-success mt-3';
+                    successElement.textContent = data.message;
+                    document.getElementById('step2').prepend(successElement);
+                } else {
+                    // Показываем ошибку
+                    errorElement.textContent = data.error;
+                    errorElement.classList.remove('d-none');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                errorElement.textContent = 'Произошла ошибка. Попробуйте еще раз.';
+                errorElement.classList.remove('d-none');
+            });
+    });
+
+    // Обработка отправки второй формы (код и пароль)
+    document.getElementById("resetForm2").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const errorElement = document.getElementById('passwordError');
+        errorElement.classList.add('d-none');
+
+        fetch('', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Создаем сообщение об успехе
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = 'alert alert-success';
+                    alertDiv.textContent = data.message;
+
+                    // Добавляем сообщение на основную страницу
+                    document.querySelector('.auth-container').prepend(alertDiv);
+
+                    // Полностью закрываем модальное окно
+                    closeModal();
+
+                    // Через 5 секунд убираем сообщение
+                    setTimeout(() => alertDiv.remove(), 5000);
+
+                    // Сбрасываем формы в модальном окне
+                    document.getElementById('resetForm1').reset();
+                    document.getElementById('resetForm2').reset();
+                    document.getElementById('step1').classList.add('active');
+                    document.getElementById('step2').classList.remove('active');
+
+                } else {
+                    // Показываем ошибку
+                    errorElement.textContent = data.error;
+                    errorElement.classList.remove('d-none');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                errorElement.textContent = 'Произошла ошибка. Попробуйте еще раз.';
+                errorElement.classList.remove('d-none');
+            });
+    });
+
+    // Сброс формы при открытии модального окна
+    document.getElementById('resetModal').addEventListener('show.bs.modal', function () {
+        document.getElementById('step1').classList.add('active');
+        document.getElementById('step2').classList.remove('active');
+        document.getElementById('resetForm1').reset();
+        document.getElementById('resetForm2').reset();
+        document.getElementById('emailError').classList.add('d-none');
+        document.getElementById('passwordError').classList.add('d-none');
+    });
+
+    // Дополнительная очистка при закрытии модального окна
+    document.getElementById('resetModal').addEventListener('hidden.bs.modal', function () {
+        // Удаляем все бэкдропы на всякий случай
+        document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.paddingRight = '';
+    });
+</script>
+
+<?php include 'php/footer.php'; ?>
+</body>
+</html>
+
+______________________________________________________________________
+
+ЛогАут.   (logout.php)
+
+<?php
+session_start();
+session_unset();
+session_destroy();
+header('Location: ../index.php');
+exit;
+
+______________________________________________________________________
+
+
+Магазин.      (magazin.php)
+
+<?php
+session_start();
+require 'php/db.php';
+
+$searchQuery = '';
+if (isset($_GET['search'])) {
+    $searchQuery = trim($_GET['search']);
+    $stmt = $pdo->prepare("SELECT * FROM products WHERE name LIKE :search");
+    $stmt->execute(['search' => '%' . $searchQuery . '%']);
+} else {
+    $stmt = $pdo->query("SELECT * FROM products");
+}
+$products = $stmt->fetchAll();
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<?php include 'php/header.php'; ?>
+
+<section class="catalog">
+    <div class="wrapper">
+        <h1 class="text-center my-4">Каталог товаров</h1>
+
+        <!-- Строка поиска -->
+        <!-- вот тут сделать помимо кнопки поиска ещё кнопку смены отображения (списком или колонками)-->
+        <!-- Сделать фильтр по категориям (тарелки, кружки, наборы и тп) и по акциям -->
+        <form class="d-flex mb-4" role="search" method="GET">
+            <input class="form-control me-2" type="search" name="search" placeholder="Поиск товаров" aria-label="Поиск" value="<?php echo htmlspecialchars($searchQuery); ?>">
+            <button class="btn btn-outline-success" type="submit">Искать</button>
+        </form>
+
+        <!-- вот тут сделать слайдер с акциями на товары -->
+        <!-- Список товаров -->
+        <div class="row">
+            <?php if ($products): ?>
+                <?php foreach ($products as $product): ?>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="<?php echo htmlspecialchars($product['image']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo htmlspecialchars($product['name']); ?></h5>
+                                <p class="card-text"><?php echo htmlspecialchars(mb_strimwidth($product['description'], 0, 50, '...'));?></p>
+                                <p class="card-text"><strong><?php echo htmlspecialchars($product['price']); ?> руб.</strong></p>
+                                <a href="product.php?id=<?php echo $product['id']; ?>" class="btn btn-primary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p class="text-center">Товары не найдены.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+
+<?php include 'php/footer.php'; ?>
+<!-- Подключение Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+_________________________________________
+
+
+Продукт.      (product.php)
+
+<?php
+session_start();
+require 'php/db.php';
+
+$productId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+if ($productId <= 0) {
+    die('Товар не найден.');
+}
+
+$isInFavorites = false;
+if (isset($_SESSION['user_id'])) {
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM favorites WHERE user_id = ? AND product_id = ?");
+    $stmt->execute([$_SESSION['user_id'], $productId]);
+    $isInFavorites = $stmt->fetchColumn() > 0;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['toggle_favorite'])) {
+    if (!isset($_SESSION['user'])) {
+        header('Location: login.php');
+        exit;
+    }
+
+    $userId = (int)$_SESSION['user_id'];
+
+    if ($isInFavorites) {
+        // Удаляем из избранного
+        $stmt = $pdo->prepare("DELETE FROM favorites WHERE user_id = ? AND product_id = ?");
+        $stmt->execute([$userId, $productId]);
+    } else {
+        // Добавляем в избранное
+        $stmt = $pdo->prepare("INSERT INTO favorites (user_id, product_id) VALUES (?, ?)");
+        try {
+            $stmt->execute([$userId, $productId]);
+        } catch (PDOException $e) {
+            // Игнорируем ошибку дубликата (если товар уже в избранном)
+            if ($e->getCode() != 23000) { // Код ошибки дубликата в MySQL
+                throw $e;
+            }
+        }
+    }
+
+    header("Location: product.php?id=$productId");
+    exit;
+}
+
+// Получаем информацию о товаре
+$stmt = $pdo->prepare("SELECT * FROM products WHERE id = ?");
+$stmt->execute([$productId]);
+$product = $stmt->fetch();
+
+if (!$product) {
+    die('Товар не найден.');
+}
+
+
+// Получаем акции для этого товара
+$promotions = $pdo->prepare("
+    SELECT p.* 
+    FROM promotions p
+    JOIN promotion_products pp ON p.id = pp.promotion_id
+    WHERE pp.product_id = :product_id 
+    AND p.start_date <= CURRENT_DATE() 
+    AND p.end_date >= CURRENT_DATE()
+    AND p.is_active = 1
+    ORDER BY p.discount_percent DESC
+");
+$promotions->execute(['product_id' => $productId]);
+$promotions = $promotions->fetchAll();
+
+// Рассчитываем скидочную цену
+$hasDiscount = !empty($promotions);
+$discountPercent = $hasDiscount ? $promotions[0]['discount_percent'] : 0;
+$finalPrice = $product['price'] * (1 - $discountPercent / 100);
+
+// Получаем отзывы
+$reviewsStmt = $pdo->prepare("
+    SELECT r.comment, r.rating, r.created_at, u.username
+    FROM reviews r
+    JOIN users u ON r.user_id = u.id
+    WHERE r.product_id = :product_id
+    ORDER BY r.created_at DESC
+");
+$reviewsStmt->execute(['product_id' => $productId]);
+$reviews = $reviewsStmt->fetchAll();
+
+// Проверяем, покупал ли пользователь этот товар
+$hasPurchased = false;
+if (isset($_SESSION['user_id'])) {
+    $userId = (int)$_SESSION['user_id'];
+
+    $ordersStmt = $pdo->prepare("SELECT id FROM orders WHERE user_id = :user_id AND status = 'completed'");
+    $ordersStmt->execute(['user_id' => $userId]);
+    $orders = $ordersStmt->fetchAll(PDO::FETCH_COLUMN);
+
+    if (!empty($orders)) {
+        $placeholders = implode(',', array_fill(0, count($orders), '?'));
+        $purchasedStmt = $pdo->prepare("
+            SELECT COUNT(*) 
+            FROM order_items 
+            WHERE order_id IN ($placeholders) 
+            AND product_id = ?
+        ");
+
+        $params = array_merge($orders, [$productId]);
+        $purchasedStmt->execute($params);
+
+        $hasPurchased = $purchasedStmt->fetchColumn() > 0;
+    }
+}
+
+// Обработка добавления в корзину
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
+    if (!isset($_SESSION['user'])) {
+        header('Location: login.php');
+        exit;
+    }
+
+    $userId = (int)$_SESSION['user_id'];
+    $productId = (int)$_GET['id'];
+    $quantityToAdd = (int)$_POST['quantity'];
+
+    // Проверяем доступное количество
+    $stmt = $pdo->prepare("SELECT stock FROM products WHERE id = ?");
+    $stmt->execute([$productId]);
+    $stock = $stmt->fetchColumn();
+
+    if ($stock < $quantityToAdd) {
+        $_SESSION['error'] = 'Недостаточно товара на складе';
+        header("Location: product.php?id=$productId");
+        exit;
+    }
+
+    try {
+        $pdo->beginTransaction();
+
+        // Проверяем, есть ли уже такой товар в корзине
+        $stmt = $pdo->prepare("SELECT id, quantity FROM cart WHERE user_id = ? AND product_id = ?");
+        $stmt->execute([$userId, $productId]);
+        $existingItem = $stmt->fetch();
+
+        if ($existingItem) {
+            // Обновляем количество существующего товара
+            $newQuantity = $existingItem['quantity'] + $quantityToAdd;
+            $stmt = $pdo->prepare("UPDATE cart SET quantity = ? WHERE id = ?");
+            $stmt->execute([$newQuantity, $existingItem['id']]);
+        } else {
+            // Добавляем новый товар в корзину
+            $stmt = $pdo->prepare("INSERT INTO cart (user_id, product_id, quantity) VALUES (?, ?, ?)");
+            $stmt->execute([$userId, $productId, $quantityToAdd]);
+        }
+
+        // Уменьшаем количество на складе
+        $stmt = $pdo->prepare("UPDATE products SET stock = stock - ? WHERE id = ?");
+        $stmt->execute([$quantityToAdd, $productId]);
+
+        $pdo->commit();
+        header('Location: cart.php');
+        exit;
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        $_SESSION['error'] = 'Ошибка при добавлении товара в корзину: ' . $e->getMessage();
+        header("Location: product.php?id=$productId");
+        exit;
+    }
+}
+
+// Обработка добавления отзыва
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_review'])) {
+    if (!isset($_SESSION['user'])) {
+        die('Вы должны быть авторизованы для добавления отзыва.');
+    }
+
+    $userId = (int)$_SESSION['user_id'];
+    $comment = trim($_POST['comment']);
+    $rating = (int)$_POST['rating'];
+
+    if (!$hasPurchased) {
+        $review_error = 'Вы не можете оставить отзыв, так как не заказывали этот товар.';
+    } elseif ($comment && $rating >= 1 && $rating <= 5) {
+        $stmt = $pdo->prepare("INSERT INTO reviews (product_id, user_id, comment, rating) VALUES (:product_id, :user_id, :comment, :rating)");
+        $stmt->execute([
+            'product_id' => $productId,
+            'user_id' => $userId,
+            'comment' => $comment,
+            'rating' => $rating,
+        ]);
+
+        header("Location: product.php?id=$productId");
+        exit;
+    } else {
+        $review_error = 'Заполните корректно все поля.';
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($product['name']); ?></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<?php include 'php/header.php'; ?>
+
+<section class="product-details py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Картинка товара -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="<?php echo htmlspecialchars($product['image']); ?>" class="img-fluid rounded" alt="<?php echo htmlspecialchars($product['name']); ?>">
+            </div>
+
+            <!-- Информация о товаре -->
+            <div class="col-md-6">
+                <h1 class="mb-3"><?php echo htmlspecialchars($product['name']); ?></h1>
+                <p class="text-muted mb-4"><?php echo htmlspecialchars($product['description']); ?></p>
+
+                <!-- Блок с ценой и акцией -->
+                <div class="price-block mb-4">
+                    <?php if ($hasDiscount): ?>
+                        <div class="promotion-badge mb-2">
+                            <span class="badge bg-danger fs-5">
+                                Участвует в акции: <?php echo htmlspecialchars($promotions[0]['title']); ?> (-<?php echo $discountPercent; ?>%)
+                            </span>
+                        </div>
+                        <p class="fw-bold">
+                            <span class="text-decoration-line-through text-muted me-2"><?php echo number_format($product['price'], 2, '.', ' '); ?> руб.</span>
+                            <span class="text-warning fs-3"><?php echo number_format($finalPrice, 2, '.', ' '); ?> руб.</span>
+                        </p>
+                    <?php else: ?>
+                        <p class="fw-bold fs-3">Цена: <?php echo number_format($product['price'], 2, '.', ' '); ?> руб.</p>
+                    <?php endif; ?>
+                </div>
+
+                <p class="fw-light">Наличие: <?php echo htmlspecialchars($product['stock']); ?> шт.</p>
+
+                <!-- Форма добавления в корзину -->
+                <?php if (isset($_SESSION['user'])): ?>
+                    <?php if ($product['stock'] > 0): ?>
+                        <div class="d-flex align-items-center">
+                            <form method="POST" class="d-flex align-items-center">
+                                <input type="number" name="quantity" value="1" min="1" max="<?php echo htmlspecialchars($product['stock']); ?>" class="form-control w-25 me-2" required>
+                                <button type="submit" name="add_to_cart" class="btn btn-primary">Добавить в корзину</button>
+                            </form>
+                            <form method="POST">
+                                <button type="submit" name="toggle_favorite" class="btn <?= $isInFavorites ? 'btn-danger' : 'btn-warning' ?>">
+                                    <?= $isInFavorites ? 'Удалить из избранного' : 'Добавить в избранное' ?>
+                                </button>
+                            </form>
+                        </div>
+                    <?php else: ?>
+                        <div class="d-flex flex-column">
+                            <p class="text-danger">Товар временно отсутствует.</p>
+                            <form method="POST">
+                                <button type="submit" name="add_to_favorites" class="btn btn-warning">Добавить в избранное</button>
+                            </form>
+                        </div>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <p>Чтобы добавить товар в корзину, войдите в систему.</p>
+                <?php endif; ?>
+
+                <?php if (isset($error)): ?>
+                    <p class="text-danger mt-3"><?php echo htmlspecialchars($error); ?></p>
+                <?php endif; ?>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Раздел отзывов -->
+        <h2>Отзывы</h2>
+        <?php if ($reviews): ?>
+            <div class="list-group mb-5">
+                <?php foreach ($reviews as $review): ?>
+                    <div class="list-group-item">
+                        <h5 class="mb-1"><?php echo htmlspecialchars($review['username']); ?></h5>
+                        <p class="mb-1"><?php echo htmlspecialchars($review['comment']); ?></p>
+                        <small>Рейтинг: <?php echo htmlspecialchars($review['rating']); ?> из 5 | <?php echo htmlspecialchars($review['created_at']); ?></small>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <p class="text-muted">Пока нет отзывов. Будьте первым!</p>
+        <?php endif; ?>
+
+        <!-- Форма добавления отзыва -->
+        <?php if (isset($_SESSION['user'])): ?>
+            <h3>Добавить отзыв</h3>
+            <?php if ($hasPurchased): ?>
+                <form method="POST">
+                    <div class="mb-3">
+                        <textarea name="comment" rows="4" class="form-control" placeholder="Напишите ваш отзыв" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <select name="rating" class="form-select" required>
+                            <option value="5">5 - Отлично</option>
+                            <option value="4">4 - Хорошо</option>
+                            <option value="3">3 - Средне</option>
+                            <option value="2">2 - Плохо</option>
+                            <option value="1">1 - Ужасно</option>
+                        </select>
+                    </div>
+                    <button type="submit" name="submit_review" class="btn btn-success">Отправить</button>
+                </form>
+            <?php else: ?>
+                <div class="alert alert-info">
+                    Вы ещё не заказывали данный товар, чтобы оставлять отзыв о нём, заказывайте и делитесь впечатлениями о приобретённом товаре!
+                </div>
+            <?php endif; ?>
+        <?php else: ?>
+            <p>Войдите в систему, чтобы оставить отзыв.</p>
+        <?php endif; ?>
+
+        <?php if (isset($review_error)): ?>
+            <p class="text-danger mt-3"><?php echo htmlspecialchars($review_error); ?></p>
+        <?php endif; ?>
+    </div>
+</section>
+
+<?php include 'php/footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+_____________________________________________________________
+
+профайл.     (profile.php)
+
+<?php
+session_start();
+require 'php/db.php';
+if (!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    exit;
+}
+
+// Получаем избранные товары с правильной группировкой
+$userId = (int)$_SESSION['user_id'];
+$stmt = $pdo->prepare("
+    SELECT DISTINCT p.id, p.name, p.price, p.image,
+    COALESCE(
+        (SELECT MAX(pr.discount_percent) 
+         FROM promotions pr 
+         JOIN promotion_products pp ON pr.id = pp.promotion_id
+         WHERE pp.product_id = p.id 
+         AND pr.start_date <= CURRENT_DATE() 
+         AND pr.end_date >= CURRENT_DATE()
+         AND pr.is_active = 1),
+        0
+    ) AS discount_percent
+    FROM favorites f
+    JOIN products p ON f.product_id = p.id
+    WHERE f.user_id = :user_id
+");
+$stmt->execute(['user_id' => $userId]);
+$favorites = $stmt->fetchAll();
+
+// Рассчитываем скидочные цены
+foreach ($favorites as &$favorite) {
+    $favorite['discounted_price'] = $favorite['price'] * (1 - $favorite['discount_percent'] / 100);
+}
+unset($favorite); // Важно: разрываем ссылку
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .discounted-price {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<?php include 'php/header.php'; ?>
+
+<section class="profile-section py-5">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">Добро пожаловать, <?php echo htmlspecialchars($_SESSION['user']); ?>!</h1>
+        <p class="lead mb-4">Ваши личные данные и настройки</p>
+
+        <div class="d-flex justify-content-center gap-3">
+            <a href="cart.php" class="btn btn-primary btn-lg">Перейти в корзину</a>
+            <a href="php/orders.php" class="btn btn-primary btn-lg">Перейти к заказам</a>
+            <a href="logout.php" class="btn btn-danger btn-lg">Выйти</a>
+        </div>
+    </div>
+</section>
+
+<section class="profile-section py-5">
+    <div class="container">
+        <h2 class="mb-4">Избранные товары</h2>
+
+        <?php if (count($favorites) > 0): ?>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <?php foreach ($favorites as $favorite): ?>
+                    <div class="col">
+                        <div class="card h-100 position-relative">
+                            <?php if ($favorite['discount_percent'] > 0): ?>
+                                <span class="badge bg-danger discount-badge">-<?= $favorite['discount_percent'] ?>%</span>
+                            <?php endif; ?>
+
+                            <img src="<?= htmlspecialchars($favorite['image']) ?>"
+                                 class="card-img-top"
+                                 alt="<?= htmlspecialchars($favorite['name']) ?>"
+                                 style="height: 200px; object-fit: cover;">
+
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">
+                                    <a href="product.php?id=<?= $favorite['id'] ?>" class="text-decoration-none">
+                                        <?= htmlspecialchars($favorite['name']) ?>
+                                    </a>
+                                </h5>
+
+                                <div class="mt-auto">
+                                    <?php if ($favorite['discount_percent'] > 0): ?>
+                                        <p class="card-text mb-1">
+                                            <span class="original-price"><?= number_format($favorite['price'], 2, '.', ' ') ?> руб.</span>
+                                        </p>
+                                        <p class="card-text discounted-price">
+                                            <?= number_format($favorite['discounted_price'], 2, '.', ' ') ?> руб.
+                                        </p>
+                                    <?php else: ?>
+                                        <p class="card-text">
+                                            <?= number_format($favorite['price'], 2, '.', ' ') ?> руб.
+                                        </p>
+                                    <?php endif; ?>
+
+                                    <form method="POST" action="php/remove_favorite.php" class="mt-2">
+                                        <input type="hidden" name="product_id" value="<?= $favorite['id'] ?>">
+                                        <button type="submit" class="btn btn-danger w-100">Удалить из избранного</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <div class="text-center py-4">
+                <p class="text-muted fs-5">У вас нет избранных товаров.</p>
+                <a href="magazin.php" class="btn btn-primary">Перейти в каталог</a>
+            </div>
+        <?php endif; ?>
+    </div>
+</section>
+
+<?php include 'php/footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+__________________________________________________________
+
+рег.  (reg.php)
+
+<?php
+session_start();
+require 'php/db.php';
+
+$error = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = trim($_POST['username']);
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+
+    if ($username && $email && $password) {
+        $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username OR email = :email');
+        $stmt->execute(['username' => $username, 'email' => $email]);
+        $existingUser = $stmt->fetch();
+
+        if ($existingUser) {
+            $error = 'Имя пользователя или email уже используются.';
+        } else {
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+            $stmt = $pdo->prepare('INSERT INTO users (username, email, password) VALUES (:username, :email, :password)');
+            $stmt->execute([
+                'username' => $username,
+                'email' => $email,
+                'password' => $hashedPassword
+            ]);
+            header('Location: login.php');
+            exit;
+        }
+    } else {
+        $error = 'Заполните все поля.';
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<?php include 'php/header.php'; ?>
+
+<section class="auth-section">
+    <div class="auth-container">
+        <h1>Регистрация</h1>
+        <?php if ($error): ?>
+            <p class="error-message"><?php echo htmlspecialchars($error); ?></p>
+        <?php endif; ?>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Имя пользователя" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+</section>
+
+<?php include 'php/footer.php'; ?>
+</body>
+</html>
+
+
+________________________________________________________________
+
+настройки.  (setup.php)
+
+<<?php
+require 'php/db.php';
+session_start();
+echo "Подключение к базе данных выполнено успешно.";
+
+if (!isset($_SESSION['user_id']) || $_SESSION['is_admin'] !== 1) {
+    header('Location: login.php');
+    exit;
+}
+
+try {
+    $pdo->exec("CREATE TABLE IF NOT EXISTS users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(50) NOT NULL UNIQUE,
+        password VARCHAR(255) NOT NULL,
+        email VARCHAR(100) NOT NULL UNIQUE,
+        is_admin TINYINT(1) DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )");
+
+    $pdo->exec("CREATE TABLE IF NOT EXISTS products (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        description TEXT,
+        price DECIMAL(10, 2) NOT NULL,
+        image VARCHAR(255),
+        stock INT DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )");
+
+    $pdo->exec("CREATE TABLE IF NOT EXISTS comments (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        product_id INT NOT NULL,
+        user_id INT NOT NULL,
+        comment TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE,
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    )");
+
+    $pdo->exec("CREATE TABLE IF NOT EXISTS orders (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT NOT NULL,
+        total DECIMAL(10, 2) NOT NULL,
+        status ENUM('pending', 'completed', 'canceled') DEFAULT 'pending',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    )");
+
+    echo "Таблицы успешно созданы!";
+} catch (PDOException $e) {
+    die("Ошибка при создании таблиц: " . $e->getMessage());
+}
+?>
+
+
